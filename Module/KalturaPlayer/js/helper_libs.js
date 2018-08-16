@@ -444,13 +444,8 @@ function bottomBarContent(index) {
 }
 
 function getBottomBarIndex() {
-
-    console.log("Trang bottomBar cũ: " + lastButtonBarIndex); 
-    console.log("BottomBar chỉ có 1: " + isBottomBarOne);
-
     if (isBottomBarOne == true) {
         if (lastVideoBottomBarIndex != -1) {
-            console.log("Giu nguyen bottom bar");
             return lastButtonBarIndex;
         }
     }

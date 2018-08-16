@@ -137,7 +137,6 @@ function invertFullScreen() {
 function doFullScreen(docElm) {
     var isInFullScreen = (docElm.fullScreenElement && docElm.fullScreenElement !== null) || 
             (docElm.mozFullScreen || docElm.webkitIsFullScreen);
-            console.log("run fullscreen");
     if( DEVICE_PLATFORM == "ipad") {        
         return;
 
