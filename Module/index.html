@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
-        <title>Video player with caption</title>
+        <title>Kaltura Player Sample</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <!-- NOTE -->
         <meta name="apple-mobile-web-app-capable" content="yes">
@@ -31,21 +31,6 @@
     <body>
 
         <script>
-            /*
-            var params_string = window.location.search;
-            if (params_string.charAt(0) != "?") {
-                var url = window.parent.document.getElementsByClassName("portletMainIframe")[0].src;
-                var parent_url = window.parent.wxindow.parent.document.getElementsByClassName("portletMainIframe")[0].src;
-
-
-                 window.parent.window.parent.document.getElementsByClassName("portletMainIframe")[0].src =
-                 url.replace("/index.html", "/run.html");
-
-
-                console.log(url.replace("/index.html", "/run.html"));
-
-                window.stop();
-            }*/
             window.addEventListener("resize", function () {
                 if (__fullscreenMode == true) {
                     scaleFullScreen();

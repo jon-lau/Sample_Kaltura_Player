@@ -18,28 +18,4 @@
     </resources>
     <supplements/>
   </video>
-  <!-- Video B -->
-  <video id="1_3hn7u7zb" title="Video B: Introducing the focus questions" thumbnail="#" content="#">
-    <cuepoints>
-      <cuepoint id="VID01" time="00:00:00" src="media/Slides/Slide09.png"/>
-    </cuepoints>
-    <resources>
-      <resource id="1" name="Slide: Which is more 4/4 or 4/8?" src="media/Slides/Slide08.png"/>
-      <resource id="2" name="Transcript: Four-fourths and four-eighths" src="media/s01_p3c_4fourths-4eighths_transcript.pdf"/>
-      <resource id="3" name="Handout: Focus questions" src="media/Handouts/s01_p3_focus-questions.pdf"/>
-    </resources>
-    <supplements/>
-  </video>
-  <!-- Video C -->
-  <video id="1_bq0c8p22" title="Video C: Four-fourths and four-eighths" thumbnail="#" content="#">
-    <cuepoints>
-      <cuepoint id="VID01" time="00:00:00" src="media/Slides/Slide09.png"/>
-    </cuepoints>
-    <resources>
-      <resource id="1" name="Slide: Which is more 4/4 or 4/8?" src="media/Slides/Slide08.png"/>
-      <resource id="2" name="Transcript: Four-fourths and four-eighths" src="media/s01_p3c_4fourths-4eighths_transcript.pdf"/>
-      <resource id="3" name="Handout: Focus questions" src="media/Handouts/s01_p3_focus-questions.pdf"/>
-    </resources>
-    <supplements/>
-  </video>
 </data>
