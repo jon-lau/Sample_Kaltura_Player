@@ -1,6 +1,3 @@
-/**
- * Created by Khoi on 7/25/2016.
- */
 var title = $("#pageTitle").text();
 
 if( title.length <= 55 ) {
@@ -25,11 +22,8 @@ function fixUI_controlBar() {
     var iframe_controlBarContainer = $("#player_ifp").contents().find("body").find('div[class*=controlBarContainer]');
     iframe_controlBarContainer.css("margin-bottom", "114px");
 
-	//.sourceSelector
-
 	var iframe_sourceSelector = $("#player_ifp").contents().find("body").find('div[class*=sourceSelector]');
     iframe_sourceSelector.css("margin-right", "110px");
-
 
     var iframe_body = $("#player_ifp").contents().find("body");
     iframe_body.append('<style type="text/css"> .icon-cog:before { content: url(KalturaPlayer/images/resolution-fix.png) !important; }; </style>');
@@ -50,7 +44,7 @@ function fixUI_videoHolder() {
 
     if( globalSlideMode == 1 || globalSlideMode == 2 ) {
         var iframe_videoHolder = $("#player_ifp").contents().find("body").find('div[class*=videoDisplay]');
-        if( iframe_videoHolder.height() != "100%" ) { // Fix khoang den phia tren
+        if( iframe_videoHolder.height() != "100%" ) { 
             iframe_videoHolder.css("height", "100%");        
         }
     }
@@ -71,7 +65,6 @@ function fixUI_loopForever() {
 function fixUI_StandardSlideSize() {
     if( globalStandardSlideWidth == 0 ) {
         if( globalSlidesArray.length > 0 ) {
-            console.log("Data/" + theSession["module"] + "/" + theSession["session"] + "/" + globalSlidesArray[0].attributes[2].nodeValue);
             getStandardSlideMeta( "Data/" + theSession["module"] + "/" + theSession["session"] + "/" + globalSlidesArray[0].attributes[2].nodeValue);
         }
     }
@@ -79,7 +72,7 @@ function fixUI_StandardSlideSize() {
 
 function getStandardSlideMeta(url){
     $("<img/>",{
-        load : function(){ globalStandardSlideWidth = this.width; globalStandardSlideHeight = this.height; /*console.log("ngon roi:" + globalStandardSlideWidth + " " + globalStandardSlideHeight);*/ },
+        load : function(){ globalStandardSlideWidth = this.width; globalStandardSlideHeight = this.height; },
         src  : url
     });
 }

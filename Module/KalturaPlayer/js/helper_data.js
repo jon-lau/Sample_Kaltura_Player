@@ -5,12 +5,10 @@ function findAndReplace(searchText, replacement, searchNode) {
 }
 
 function readXMLCuepoints(slideshowXML) {
-    if (window.XMLHttpRequest)
-    {// code for IE7+, Firefox, Chrome, Opera, Safari
+    if (window.XMLHttpRequest) {
         xmlhttp = new XMLHttpRequest();
     }
-    else
-    {// code for IE6, IE5
+    else {
         xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
     }
     xmlhttp.open("GET", slideshowXML, false);
@@ -18,27 +16,18 @@ function readXMLCuepoints(slideshowXML) {
     xmlDoc = xmlhttp.responseXML;
 
     var cuepoints = null;
-    /*
-     if (xmlDoc.getElementsByTagName("cuepoints") != null) {
-     cuepoints = xmlDoc.getElementsByTagName("cuepoints")[0].getElementsByTagName("cuepoint");
-     }*/
     if (xmlDoc.getElementsByTagName("video") != null) {
 
-        if( theSession["video"] == "" )
+        if (theSession["video"] == "")
             theSession["video"] = xmlDoc.getElementsByTagName("video")[0]["id"];
 
-        for( var i = 0; i < xmlDoc.getElementsByTagName("video").length; i ++ ) {
-            if( theSession["video"] == xmlDoc.getElementsByTagName("video")[i]["id"] ) {
+        for (var i = 0; i < xmlDoc.getElementsByTagName("video").length; i++) {
+            if (theSession["video"] == xmlDoc.getElementsByTagName("video")[i]["id"]) {
                 var video = xmlDoc.getElementsByTagName("video");
                 var cuepoints = video[i].getElementsByTagName("cuepoints");
-                if( cuepoints[0] != null )
+                if (cuepoints[0] != null)
                     cuepoints = cuepoints[0].getElementsByTagName("cuepoint");
                 break;
-                /*
-                var relatedvideos = video[i].getElementsByTagName("relatedvideos");
-                if( relatedvideos[0] != null )
-                    globalRelateArray = relatedvideos[0].getElementsByTagName("relate");
-                break;*/
             }
         }
     }
@@ -48,15 +37,13 @@ function readXMLCuepoints(slideshowXML) {
 }
 
 function readRelatedVideo(slideshowXML) {
-    if( globalRelateArray != null )
+    if (globalRelateArray != null)
         return globalRelateArray;
 
-    if (window.XMLHttpRequest)
-    {// code for IE7+, Firefox, Chrome, Opera, Safari
+    if (window.XMLHttpRequest) {
         xmlhttp = new XMLHttpRequest();
     }
-    else
-    {// code for IE6, IE5
+    else {
         xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
     }
     xmlhttp.open("GET", slideshowXML, false);
@@ -64,32 +51,32 @@ function readRelatedVideo(slideshowXML) {
     xmlDoc = xmlhttp.responseXML;
 
     var relatedvideos = null;
-    if( xmlDoc != null )
-    if (xmlDoc.getElementsByTagName("video") != null) {
+    if (xmlDoc != null)
+        if (xmlDoc.getElementsByTagName("video") != null) {
 
-        if( theSession["video"] == "" )
-            theSession["video"] = xmlDoc.getElementsByTagName("video")[0]["id"];
+            if (theSession["video"] == "")
+                theSession["video"] = xmlDoc.getElementsByTagName("video")[0]["id"];
 
-        for( var i = 0; i < xmlDoc.getElementsByTagName("video").length; i ++ ) {
-            if( theSession["video"] == xmlDoc.getElementsByTagName("video")[i]["id"] ) {
-                var video = xmlDoc.getElementsByTagName("video");
+            for (var i = 0; i < xmlDoc.getElementsByTagName("video").length; i++) {
+                if (theSession["video"] == xmlDoc.getElementsByTagName("video")[i]["id"]) {
+                    var video = xmlDoc.getElementsByTagName("video");
 
-                relatedvideos = video[i].getElementsByTagName("relatedvideos");
-                if( relatedvideos[0] != null )
-                    relatedvideos = relatedvideos[0].getElementsByTagName("relate");
-                break;
+                    relatedvideos = video[i].getElementsByTagName("relatedvideos");
+                    if (relatedvideos[0] != null)
+                        relatedvideos = relatedvideos[0].getElementsByTagName("relate");
+                    break;
+                }
             }
         }
-    }
 
-    if( relatedvideos.length == 0) { //Ko có thì lấy thằng đầu tiên 
-    {    
-        var video = xmlDoc.getElementsByTagName("video");
-        isBottomBarOne = true;
-    }
+    if (relatedvideos.length == 0) {
+        {
+            var video = xmlDoc.getElementsByTagName("video");
+            isBottomBarOne = true;
+        }
 
         relatedvideos = video[0].getElementsByTagName("relatedvideos");
-        if( relatedvideos[0] != null )
+        if (relatedvideos[0] != null)
             relatedvideos = relatedvideos[0].getElementsByTagName("relate");
     }
 
@@ -99,12 +86,10 @@ function readRelatedVideo(slideshowXML) {
 }
 
 function readXMLResources(slideshowXML) {
-    if (window.XMLHttpRequest)
-    {// code for IE7+, Firefox, Chrome, Opera, Safari
+    if (window.XMLHttpRequest) {
         xmlhttp = new XMLHttpRequest();
     }
-    else
-    {// code for IE6, IE5
+    else {
         xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
     }
     xmlhttp.open("GET", slideshowXML, false);
@@ -121,12 +106,10 @@ function readXMLResources(slideshowXML) {
 }
 
 function readXMLVideos(slideshowXML) {
-    if (window.XMLHttpRequest)
-    {// code for IE7+, Firefox, Chrome, Opera, Safari
+    if (window.XMLHttpRequest) {
         xmlhttp = new XMLHttpRequest();
     }
-    else
-    {// code for IE6, IE5
+    else {
         xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
     }
     xmlhttp.open("GET", slideshowXML, false);
@@ -136,9 +119,8 @@ function readXMLVideos(slideshowXML) {
     var videos = null;
     if (xmlDoc.getElementsByTagName("data") != null) {
         videos = xmlDoc.getElementsByTagName("data")[0].getElementsByTagName("video");
-        //console.log(videos);
         for (i = 0; i < videos.length; i++) {
-            if( videos[i].attributes[2].nodeValue == "" || videos[i].attributes[2].nodeValue == null || videos[i].attributes[2].nodeValue == "#" ) {
+            if (videos[i].attributes[2].nodeValue == "" || videos[i].attributes[2].nodeValue == null || videos[i].attributes[2].nodeValue == "#") {
                 videos[i].attributes[2].nodeValue = "https://cdnsecakmi.kaltura.com/p/243342/sp/24334200/thumbnail/entry_id/" + videos[i].attributes[0].nodeValue + "/version/100003/width/145";
             }
 
@@ -149,12 +131,10 @@ function readXMLVideos(slideshowXML) {
 }
 
 function readXMLSessions(slideshowXML) {
-    if (window.XMLHttpRequest)
-    {// code for IE7+, Firefox, Chrome, Opera, Safari
+    if (window.XMLHttpRequest) {
         xmlhttp = new XMLHttpRequest();
     }
-    else
-    {// code for IE6, IE5
+    else {
         xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
     }
     xmlhttp.open("GET", slideshowXML, false);
