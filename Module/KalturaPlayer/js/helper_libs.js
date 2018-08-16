@@ -1,4 +1,4 @@
-var theSession = {// for fullscreen mode
+var theSession = {
     module: "Module1",
     session: "Session1",
     part: "Part1",
@@ -10,19 +10,18 @@ var lastButtonBarIndex = -1;
 
 var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
 
-if(navigator.vendor != null && navigator.vendor.match(/Apple Computer, Inc./) && navigator.userAgent.match(/iPhone/i) || (navigator.userAgent.match(/iPod/i))) 
+if (navigator.vendor != null && navigator.vendor.match(/Apple Computer, Inc./) && navigator.userAgent.match(/iPhone/i) || (navigator.userAgent.match(/iPod/i)))
     DEVICE_PLATFORM = "iphone";
-else if (navigator.vendor != null && navigator.vendor.match(/Apple Computer, Inc./) && navigator.userAgent.match(/iPad/i))  
+else if (navigator.vendor != null && navigator.vendor.match(/Apple Computer, Inc./) && navigator.userAgent.match(/iPad/i))
     DEVICE_PLATFORM = "ipad";
 else if (navigator.vendor != null && navigator.vendor.match(/Apple Computer, Inc./) && navigator.userAgent.indexOf('Safari') != -1)
     DEVICE_PLATFORM = "safari";
 else if (navigator.vendor == null || navigator.vendor != null) {
     DEVICE_PLATFORM = "other";
     var ua = navigator.userAgent.toLowerCase();
-    var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
-    if(isAndroid) {
-         DEVICE_PLATFORM = "android";
-         //alert(DEVICE_PLATFORM);   
+    var isAndroid = ua.indexOf("android") > -1; 
+    if (isAndroid) {
+        DEVICE_PLATFORM = "android";
     }
 }
 
@@ -30,22 +29,22 @@ else if (navigator.vendor == null || navigator.vendor != null) {
 
 function drawFullscreenSlide(index, node_id, node_time, node_image) {
     $("#fullscreenDIV #slides").append(
-            '<div class="slide" id="' + node_id + '">' +
-            '<div class="index">' + (index + 1) + '</div>' +
-            '<a href="javascript:fullscreenDoSeek( \'' + node_id + '\',\'' + node_time + '\')"><img id="slide_' + index + '" src="Data/' + theSession["module"] + "/" + theSession["session"] + "/" + node_image + '"></a>' +
-            '</div>'
-            );
+        '<div class="slide" id="' + node_id + '">' +
+        '<div class="index">' + (index + 1) + '</div>' +
+        '<a href="javascript:fullscreenDoSeek( \'' + node_id + '\',\'' + node_time + '\')"><img id="slide_' + index + '" src="Data/' + theSession["module"] + "/" + theSession["session"] + "/" + node_image + '"></a>' +
+        '</div>'
+    );
 }
 
 function drawNormalSlide(index, node_id, node_time, node_image) {
-    
-    
+
+
     $("#normalDIV #slides").append(
-            '<div class="slide" id="' + node_id + '">' +
-            '<div class="index">' + (index + 1) + '</div>' +
-            '<a href="javascript:moveToSlide( \'' + node_id + '\',\'' + node_time + '\','+ index +')"><img id="slide_' + index + '" src="Data/' + theSession["module"] + "/" + theSession["session"] + "/" + node_image + '"></a>' +
-            '</div>'
-            );
+        '<div class="slide" id="' + node_id + '">' +
+        '<div class="index">' + (index + 1) + '</div>' +
+        '<a href="javascript:moveToSlide( \'' + node_id + '\',\'' + node_time + '\',' + index + ')"><img id="slide_' + index + '" src="Data/' + theSession["module"] + "/" + theSession["session"] + "/" + node_image + '"></a>' +
+        '</div>'
+    );
 }
 
 var globalOtherResourcePoint = 0;
@@ -59,25 +58,25 @@ function drawOtherResources(videosArray, indexSelected) {
 
     for (i = globalOtherResourcePoint; i < globalOtherResourcePoint + 5; i++) {
         if (globalResourcesArray[i] != null)
-            if( i < globalResourcesArray.length )
-            drawOtherResourcesItem(i, globalResourcesArray[i].attributes[0].nodeValue, globalResourcesArray[i].attributes[1].nodeValue, globalResourcesArray[i].attributes[2].nodeValue);
+            if (i < globalResourcesArray.length)
+                drawOtherResourcesItem(i, globalResourcesArray[i].attributes[0].nodeValue, globalResourcesArray[i].attributes[1].nodeValue, globalResourcesArray[i].attributes[2].nodeValue);
     }
 
-    if( globalResourcesArray.length > 0 ) {
+    if (globalResourcesArray.length > 0) {
         $(".btnUpResource").show();
         $(".btnDownResource").show();
-        if( globalOtherResourcePoint == 0 )
+        if (globalOtherResourcePoint == 0)
             $(".btnUpResource").hide();
 
-        if( globalOtherResourcePoint + 5 == globalResourcesArray.length )
+        if (globalOtherResourcePoint + 5 == globalResourcesArray.length)
             $(".btnDownResource").hide();
 
-    }else {
+    } else {
         $(".btnUpResource").hide();
         $(".btnDownResource").hide();
     }
 
-    if( globalResourcesArray.length <=5 ) {
+    if (globalResourcesArray.length <= 5) {
         $(".btnUpResource").hide();
         $(".btnDownResource").hide();
     }
@@ -85,48 +84,48 @@ function drawOtherResources(videosArray, indexSelected) {
 }
 
 function drawOtherResourcesItem(index, node_id, node_name, node_src) {
-    
+
     var extension = node_src.substring(node_src.length - 3, node_src.length);
     var img = 'KalturaPlayer/images/doc.png';
-    if( extension.toUpperCase() == "PDF" )
+    if (extension.toUpperCase() == "PDF")
         img = 'KalturaPlayer/images/pdf.png';
-    if( extension.toUpperCase() == "DOC" || extension.toUpperCase() == "OCX" )
+    if (extension.toUpperCase() == "DOC" || extension.toUpperCase() == "OCX")
         img = 'KalturaPlayer/images/docx.png';
-    if( extension.toUpperCase() == "VID" )
+    if (extension.toUpperCase() == "VID")
         img = 'KalturaPlayer/images/video.png';
-    if( extension.toUpperCase() == "PNG" || extension.toUpperCase() == "JPG" || extension.toUpperCase() == "GIF" )
+    if (extension.toUpperCase() == "PNG" || extension.toUpperCase() == "JPG" || extension.toUpperCase() == "GIF")
         img = 'KalturaPlayer/images/slide.png';
 
     var node_full_name = node_name;
     node_name = my_substring(node_name, 75);
 
     var html = '<div class="resource_item" id="' + node_id + '">' +
-            '<img src="'+ img +'">' +
-            '<a class="tooltip5" data-show-tooltip="true" title="'+ node_full_name +'" target=_blank href="Data/' + theSession.module + '/' + theSession.session + "/" + node_src + '">' + node_name + '</a>' +
-            '</div>';
-
-    if( extension.toUpperCase() == "VID" ) {
-        var video_id = node_src.substring( 0, node_src.length - 4);
-        var active = "";
-        if( video_id == theSession.video)
-            active = " active";
-        html = '<div class="resource_item '+ active +'" id="' + node_id + '">' +
-        '<img src="'+ img +'">' +
-        '<a class="tooltip5" data-show-tooltip="true" title="'+ node_full_name +'" href="javascript:changeVideo(\''+ theSession.module + '/' + theSession.session + '/' + theSession.part + '/' + video_id +'\')">' + node_name + '</a>' +
+        '<img src="' + img + '">' +
+        '<a class="tooltip5" data-show-tooltip="true" title="' + node_full_name + '" target=_blank href="Data/' + theSession.module + '/' + theSession.session + "/" + node_src + '">' + node_name + '</a>' +
         '</div>';
-    }
 
-    if( extension.toUpperCase() == "PDF" ) {
-        html = '<div class="resource_item" id="' + node_id + '">' +
-            '<img src="'+ img +'">' +
-            '<a class="tooltip5" data-show-tooltip="true" title="'+ node_full_name +'" href="javascript:showPDF(\'Data/' + theSession.module + '/' + theSession.session + "/" + node_src + '\')">' + node_name + '</a>' +
+    if (extension.toUpperCase() == "VID") {
+        var video_id = node_src.substring(0, node_src.length - 4);
+        var active = "";
+        if (video_id == theSession.video)
+            active = " active";
+        html = '<div class="resource_item ' + active + '" id="' + node_id + '">' +
+            '<img src="' + img + '">' +
+            '<a class="tooltip5" data-show-tooltip="true" title="' + node_full_name + '" href="javascript:changeVideo(\'' + theSession.module + '/' + theSession.session + '/' + theSession.part + '/' + video_id + '\')">' + node_name + '</a>' +
             '</div>';
     }
 
-    if( extension.toUpperCase() == "PNG" || extension.toUpperCase() == "JPG" || extension.toUpperCase() == "GIF" ) {
+    if (extension.toUpperCase() == "PDF") {
         html = '<div class="resource_item" id="' + node_id + '">' +
-            '<img src="'+ img +'">' +
-            '<a class="tooltip5" data-show-tooltip="true" title="'+ node_full_name +'" href="javascript:showPNG(\'Data/' + theSession.module + '/' + theSession.session + "/" + node_src + '\')">' + node_name + '</a>' +
+            '<img src="' + img + '">' +
+            '<a class="tooltip5" data-show-tooltip="true" title="' + node_full_name + '" href="javascript:showPDF(\'Data/' + theSession.module + '/' + theSession.session + "/" + node_src + '\')">' + node_name + '</a>' +
+            '</div>';
+    }
+
+    if (extension.toUpperCase() == "PNG" || extension.toUpperCase() == "JPG" || extension.toUpperCase() == "GIF") {
+        html = '<div class="resource_item" id="' + node_id + '">' +
+            '<img src="' + img + '">' +
+            '<a class="tooltip5" data-show-tooltip="true" title="' + node_full_name + '" href="javascript:showPNG(\'Data/' + theSession.module + '/' + theSession.session + "/" + node_src + '\')">' + node_name + '</a>' +
             '</div>';
     }
 
@@ -137,15 +136,15 @@ function drawOtherResourcesItem(index, node_id, node_name, node_src) {
 
 
 function normalResourcesDoUp() {
-    if( globalOtherResourcePoint > 0) {
-        globalOtherResourcePoint --;
+    if (globalOtherResourcePoint > 0) {
+        globalOtherResourcePoint--;
         drawOtherResources(globalVideosArray, 0);
     }
 }
 
 function normalResourcesDoDown() {
-    if( globalOtherResourcePoint  + 5 < globalResourcesArray.length ) {
-        globalOtherResourcePoint ++;
+    if (globalOtherResourcePoint + 5 < globalResourcesArray.length) {
+        globalOtherResourcePoint++;
         drawOtherResources(globalVideosArray, 0);
     }
 }
@@ -158,29 +157,29 @@ function drawSupplements(videosArray, indexSelected) {
 
     $("#fullscreenDIV #Supplements").html("");
     $("#normalDIV #Supplements").html("");
-    
+
     for (i = globalSupplementsPoint; i < globalSupplementsPoint + 5; i++) {
         if (globalSupplementsArray[i] != null)
-            if( i < globalSupplementsArray.length )
-            drawOtherSupplementsItem(i, globalSupplementsArray[i].attributes[0].nodeValue, globalSupplementsArray[i].attributes[1].nodeValue, globalSupplementsArray[i].attributes[2].nodeValue);
+            if (i < globalSupplementsArray.length)
+                drawOtherSupplementsItem(i, globalSupplementsArray[i].attributes[0].nodeValue, globalSupplementsArray[i].attributes[1].nodeValue, globalSupplementsArray[i].attributes[2].nodeValue);
     }
 
-    if( globalSupplementsArray.length > 0 ) {
+    if (globalSupplementsArray.length > 0) {
         $(".btnUpSupplements").show();
         $(".btnDownSupplements").show();
-        if( globalSupplementsPoint == 0 )
+        if (globalSupplementsPoint == 0)
             $(".btnUpSupplements").hide();
 
-        if( globalSupplementsPoint + 5 == globalSupplementsArray.length )
+        if (globalSupplementsPoint + 5 == globalSupplementsArray.length)
             $(".btnDownSupplements").hide();
 
-    }else {
+    } else {
         $(".btnUpSupplements").hide();
         $(".btnDownSupplements").hide();
     }
 
 
-    if( globalSupplementsArray.length <= 5 ) {
+    if (globalSupplementsArray.length <= 5) {
         $(".btnUpSupplements").hide();
         $(".btnDownSupplements").hide();
     }
@@ -188,63 +187,63 @@ function drawSupplements(videosArray, indexSelected) {
 }
 
 function normalSupplementsDoUp() {
-    if( globalSupplementsPoint > 0) {
-        globalSupplementsPoint --;
+    if (globalSupplementsPoint > 0) {
+        globalSupplementsPoint--;
         drawSupplements(globalVideosArray, 0);
     }
 }
 
 function normalSupplementsDoDown() {
 
-    if( globalSupplementsPoint  + 5 < globalSupplementsArray.length ) {
-        globalSupplementsPoint ++;
+    if (globalSupplementsPoint + 5 < globalSupplementsArray.length) {
+        globalSupplementsPoint++;
         drawSupplements(globalVideosArray, 0);
     }
 }
 
 
 function drawOtherSupplementsItem(index, node_id, node_name, node_src) {
-    
+
     var extension = node_src.substring(node_src.length - 3, node_src.length);
     var img = 'KalturaPlayer/images/doc.png';
-    if( extension.toUpperCase() == "PDF" )
+    if (extension.toUpperCase() == "PDF")
         img = 'KalturaPlayer/images/pdf.png';
-    if( extension.toUpperCase() == "DOC" || extension.toUpperCase() == "OCX" )
+    if (extension.toUpperCase() == "DOC" || extension.toUpperCase() == "OCX")
         img = 'KalturaPlayer/images/docx.png';
-    if( extension.toUpperCase() == "VID" )
+    if (extension.toUpperCase() == "VID")
         img = 'KalturaPlayer/images/video.png';
-    if( extension.toUpperCase() == "PNG" || extension.toUpperCase() == "JPG" || extension.toUpperCase() == "GIF" )
+    if (extension.toUpperCase() == "PNG" || extension.toUpperCase() == "JPG" || extension.toUpperCase() == "GIF")
         img = 'KalturaPlayer/images/slide.png';
 
     var node_full_name = node_name;
     node_name = my_substring(node_name, 75);
     var html = '<div class="resource_item" id="' + node_id + '">' +
-            '<img src="'+ img +'">' +
-            '<a class="tooltip5" data-show-tooltip="true" title="'+ node_full_name +'" target=_blank href="Data/' + theSession.module + '/' + theSession.session + "/" + node_src + '">' + node_name + '</a>' +
-            '</div>';
-
-    if( extension.toUpperCase() == "VID" ) {
-        var video_id = node_src.substring( 0, node_src.length - 4);
-        var active = "";
-        if( video_id == theSession.video)
-            active = " active";
-        html = '<div class="resource_item '+ active +'" id="' + node_id + '">' +
-        '<img src="'+ img +'">' +
-        '<a class="tooltip5" data-show-tooltip="true" title="'+ node_full_name +'" href="javascript:changeVideo(\''+ theSession.module + '/' + theSession.session + '/' + theSession.part + '/' + video_id +'\')">' + node_name + '</a>' +
+        '<img src="' + img + '">' +
+        '<a class="tooltip5" data-show-tooltip="true" title="' + node_full_name + '" target=_blank href="Data/' + theSession.module + '/' + theSession.session + "/" + node_src + '">' + node_name + '</a>' +
         '</div>';
-    }
 
-    if( extension.toUpperCase() == "PDF" ) {
-        html = '<div class="resource_item" id="' + node_id + '">' +
-            '<img src="'+ img +'">' +
-            '<a class="tooltip5" data-show-tooltip="true" title="'+ node_full_name +'" href="javascript:showPDF(\'Data/' + theSession.module + '/' + theSession.session + "/" + node_src + '\')">' + node_name + '</a>' +
+    if (extension.toUpperCase() == "VID") {
+        var video_id = node_src.substring(0, node_src.length - 4);
+        var active = "";
+        if (video_id == theSession.video)
+            active = " active";
+        html = '<div class="resource_item ' + active + '" id="' + node_id + '">' +
+            '<img src="' + img + '">' +
+            '<a class="tooltip5" data-show-tooltip="true" title="' + node_full_name + '" href="javascript:changeVideo(\'' + theSession.module + '/' + theSession.session + '/' + theSession.part + '/' + video_id + '\')">' + node_name + '</a>' +
             '</div>';
     }
 
-    if( extension.toUpperCase() == "PNG" || extension.toUpperCase() == "JPG" || extension.toUpperCase() == "GIF" ) {
+    if (extension.toUpperCase() == "PDF") {
         html = '<div class="resource_item" id="' + node_id + '">' +
-            '<img src="'+ img +'">' +
-            '<a class="tooltip5" data-show-tooltip="true" title="'+ node_full_name +'" href="javascript:showPNG(\'Data/' + theSession.module + '/' + theSession.session + "/" + node_src + '\')">' + node_name + '</a>' +
+            '<img src="' + img + '">' +
+            '<a class="tooltip5" data-show-tooltip="true" title="' + node_full_name + '" href="javascript:showPDF(\'Data/' + theSession.module + '/' + theSession.session + "/" + node_src + '\')">' + node_name + '</a>' +
+            '</div>';
+    }
+
+    if (extension.toUpperCase() == "PNG" || extension.toUpperCase() == "JPG" || extension.toUpperCase() == "GIF") {
+        html = '<div class="resource_item" id="' + node_id + '">' +
+            '<img src="' + img + '">' +
+            '<a class="tooltip5" data-show-tooltip="true" title="' + node_full_name + '" href="javascript:showPNG(\'Data/' + theSession.module + '/' + theSession.session + "/" + node_src + '\')">' + node_name + '</a>' +
             '</div>';
     }
 
@@ -273,31 +272,27 @@ function drawGridVideos(index, node_id, node_name, node_src, node_link, is_activ
 
 
     var link = 'index.html?' + theSession.module + "/" + theSession.session + "/" + theSession.part + "/" + node_id;
-    //var link = 'javascript:changeVideo(\'' + theSession.module + "/" + theSession.session + "/" + theSession.part + "/" + node_id + '\')';
     var html = '<div class="video_item ' + html_active + '">' +
-            '<a href="' + link + '"><img style="width:135px;height:85px" src="' + imgSrc + '"></a>' +
-            '<p><a title="' + node_name + '" href="' + link + '">' +
-            /*
-             'Video ' + (index + 1) + ':<br>' +*/
-            my_substring(node_name, 60) +
-            '</a></p>' +
-            html_active_check +
-            '</div>';
+        '<a href="' + link + '"><img style="width:135px;height:85px" src="' + imgSrc + '"></a>' +
+        '<p><a title="' + node_name + '" href="' + link + '">' +
+        my_substring(node_name, 60) +
+        '</a></p>' +
+        html_active_check +
+        '</div>';
 
 
     var htmlNormal = findAndReplace(link, 'javascript:changeVideo(\'' + link + '\')', html);
     htmlNormal = findAndReplace('index.html?', '', htmlNormal);
     $("#normalDIV .videosGrid .video_items").append(htmlNormal);
 
-    // FIX FULLSCREEN
     var htmlFullScreen = findAndReplace(link, 'javascript:exitFullscreenAndMove(\'' + link + '\')', html);
     $("#fullscreenDIV .videosGrid .video_items").append(htmlFullScreen);
 }
 
 
 
-$(window).load(function() {
-  parseUrl(theSession);
+$(window).load(function () {
+    parseUrl(theSession);
 });
 
 
@@ -368,7 +363,6 @@ function bottomBarContent(index) {
 
     var XMLSlidesPath = $("#fullscreenDIV #XMLSlidesPath").text();
     globalRelateArray = readRelatedVideo(XMLSlidesPath);
-    //console.log(globalRelateArray);
 
     if (globalRelateArray == null)
         return;
@@ -378,10 +372,6 @@ function bottomBarContent(index) {
         return;
     if (index >= globalRelateArray.length)
         return;
-
-    /*
-     var iframe = $("#player_ifp").contents().find("body").find('div[id=fullscreenDIV]');
-     var iframe_content = iframe.find('div[class=content]');*/
 
     lastButtonBarIndex = index;
 
@@ -397,8 +387,6 @@ function bottomBarContent(index) {
     createCookie("paggingIndex", index, 1);
 
     var simplyRelateArray = SimplyRelateArray(globalRelateArray);
-    //console.log(simplyRelateArray);
-
     var bottomBarCount = 0;
     for (var i = index; i < simplyRelateArray.length; i++) {
         if (simplyRelateArray[i].attributes[4] != null) {
@@ -426,19 +414,13 @@ function bottomBarContent(index) {
                 if (readCookie(simplyRelateArray[i].attributes[0].nodeValue) == "1")
                     styleRead = " read ";
 
-            /*
-             var html = '<a href="javascript:exitFullscreenAndMove(\'' + nextUrl + '\')"><img style="width:135px;height:85px" src="'+ imgSrc +'"></a>' +
-             '<p><a href="javascript:exitFullscreenAndMove(\'' + nextUrl + '\')">Video ' + (i + 1) + ":<br>" +
-             simplyRelateArray[i].attributes[1].nodeValue + '</a>' +
-             '</p>';*/
-
-            bottomBarCount ++; 
-            var htmlNormal = 'javascript:changeVideoBottomBar(\'' + theSession.module + '/' + theSession.session + '/' + theSession.part + '/' + simplyRelateArray[i].attributes[0].nodeValue + '\', '+ bottomBarCount +')';
+            bottomBarCount++;
+            var htmlNormal = 'javascript:changeVideoBottomBar(\'' + theSession.module + '/' + theSession.session + '/' + theSession.part + '/' + simplyRelateArray[i].attributes[0].nodeValue + '\', ' + bottomBarCount + ')';
 
             var html = '<a href="' + htmlNormal + '"><img style="width:135px;height:85px" src="' + imgSrc + '"></a>' +
-                    '<p><a title="' + simplyRelateArray[i].attributes[1].nodeValue + '" href="' + htmlNormal + '">' /* +'Video ' + (i + 1) + ":<br>" */ +
-                    my_substring(simplyRelateArray[i].attributes[1].nodeValue, 60) + '</a>' +
-                    '</p>';
+                '<p><a title="' + simplyRelateArray[i].attributes[1].nodeValue + '" href="' + htmlNormal + '">' /* +'Video ' + (i + 1) + ":<br>" */ +
+                my_substring(simplyRelateArray[i].attributes[1].nodeValue, 60) + '</a>' +
+                '</p>';
 
             html_content += '<div class="item' + styleActive + styleRead + '">' + html + imgActive + '</div>';
             pos++;
@@ -450,7 +432,6 @@ function bottomBarContent(index) {
 
     var fullscreen_html_content = findAndReplace("normalOpenVideosGrid", "fullscreenOpenVideosGrid", html_content);
     $("#fullscreenDIV .bottomBar .content").html(fullscreen_html_content);
-    //iframe_content.html(fullscreen_html_content);
 
     if (simplyRelateArray.length <= 1)
         bottomShowHideRightButton(false);
@@ -464,26 +445,21 @@ function bottomBarContent(index) {
 
 function getBottomBarIndex() {
 
-    console.log("Trang bottomBar cũ: " + lastButtonBarIndex); // khoipn
+    console.log("Trang bottomBar cũ: " + lastButtonBarIndex); 
     console.log("BottomBar chỉ có 1: " + isBottomBarOne);
 
-    if( isBottomBarOne == true ) {
-        //console.log(lastVideoBottomBarIndex);
-        if( lastVideoBottomBarIndex != -1 ) {
+    if (isBottomBarOne == true) {
+        if (lastVideoBottomBarIndex != -1) {
             console.log("Giu nguyen bottom bar");
             return lastButtonBarIndex;
         }
     }
-
-    // reset bottom bar var
     lastButtonBarIndex = -1;
     lastVideoBottomBarIndex = -1;
     isBottomBarOne = false;
-
     return 0;
 }
 
-// Redraw all bottom bar FIXED 02
 function redrawBottomBar() {
 
     var html_content_normal = '<div class="inner"> \
@@ -519,7 +495,6 @@ function redrawBottomBar() {
 
     $("#fullscreenDIV .bottomBar").html(html_content_fullscreen);
     $("#normalDIV .bottomBar").html(html_content_normal);
-//    console.log(theSession);
 
 
     bottomBarContent(getBottomBarIndex());
@@ -559,9 +534,9 @@ function drawBottomMenu(videosArray, indexSelected) {
             imgSrc = videosArray[indexSelected].attributes[2].nodeValue;
 
     var html = '<img style="width:135px;height:85px" src="' + imgSrc + '">' +
-            '<p>' +
-            my_substring(videosArray[indexSelected].attributes[1].nodeValue, 60) +
-            '</p>';
+        '<p>' +
+        my_substring(videosArray[indexSelected].attributes[1].nodeValue, 60) +
+        '</p>';
     $("#normalDIV #videoCurrent").html(html);
     $("#fullscreenDIV #videoCurrent").html(html);
 
@@ -585,22 +560,20 @@ function drawBottomMenu(videosArray, indexSelected) {
 
         nextUrl = 'index.html?' + theSession.module + "/" + theSession.session + "/" + theSession.part + "/" + videosArray[indexSelected + 1].attributes[0].nodeValue;
         html = '<a href="' + nextUrl + '"><img style="width:135px;height:85px" src="' + imgSrc + '"></a>' +
-                '<p><a href="' + nextUrl + '">Video ' + (indexSelected + 2) + ":<br>" +
-                videosArray[indexSelected + 1].attributes[1].nodeValue + '</a>' +
-                '</p>';
+            '<p><a href="' + nextUrl + '">Video ' + (indexSelected + 2) + ":<br>" +
+            videosArray[indexSelected + 1].attributes[1].nodeValue + '</a>' +
+            '</p>';
         $("#normalDIV #videoNext").html(html);
 
-        // FIX FULLSCREEN
         html = '<a href="javascript:exitFullscreenAndMove(\'' + nextUrl + '\')"><img style="width:135px;height:85px" src="' + imgSrc + '"></a>' +
-                '<p><a href="javascript:exitFullscreenAndMove(\'' + nextUrl + '\')">Video ' + (indexSelected + 2) + ":<br>" +
-                videosArray[indexSelected + 1].attributes[1].nodeValue + '</a>' +
-                '</p>';
+            '<p><a href="javascript:exitFullscreenAndMove(\'' + nextUrl + '\')">Video ' + (indexSelected + 2) + ":<br>" +
+            videosArray[indexSelected + 1].attributes[1].nodeValue + '</a>' +
+            '</p>';
         $("#fullscreenDIV #videoNext").html(html);
 
         html = '<p>&nbsp;</p><a href="' + nextUrl + '"><img src="KalturaPlayer/images/bt_bottom_right.png"></a>'
         $("#normalDIV #videoNextBt").html(html);
 
-        // FIX FULLSCREEN
         html = '<p>&nbsp;</p><a href="javascript:exitFullscreenAndMove(\'' + nextUrl + '\')"><img src="KalturaPlayer/images/bt_bottom_right.png"></a>'
         $("#fullscreenDIV #videoNextBt").html(html);
 
@@ -618,7 +591,6 @@ function drawBottomMenu(videosArray, indexSelected) {
 function exitFullscreenAndMove(url) {
     window.parent.myKdp.sendNotification('closeFullScreen');
     setTimeout(function () {
-        //window.parent.location.href = url;
         url = url.replace("index.html?", "");
         window.parent.myKdp.sendNotification('exitFullscreenAndMove', url);
     }, 200);
@@ -662,17 +634,14 @@ function drawModulesMenu(index, node_name, node_link, parts) {
             if (isSelected) {
                 if (parts[j].attributes[1].nodeValue == theSession["part"]) {
 
-                    // Fill page title data
                     pageTitle += ": " + parts[j].attributes[2].nodeValue;
                     pageTitle = substringEx(pageTitle, 125);
-                    // KHOIPN: fix the title
                     var currentPart = curSession + "-" + (j + 1);
                     pageTitle = pageTitle.replace(node_name, currentPart);
 
                     $("#normalDIV #pageTitle").html(pageTitle);
                     $("#fullscreenDIV #pageTitle").html(pageTitle);
 
-                    // Fill back next menu data
                     var backPartLink = "#";
                     var backPartText = curSession + "-" + j;
                     if (j > 0)
@@ -680,7 +649,7 @@ function drawModulesMenu(index, node_name, node_link, parts) {
 
                     var nextPartLink = "#";
                     var nextPartText = curSession + "-" + (j + 2);
-                    
+
                     if (j < parts.length - 1)
                         nextPartLink = 'index.html?' + theSession.module + "/" + node_link + "/" + parts[j + 1].attributes[1].nodeValue;
 
@@ -704,7 +673,6 @@ function drawModulesMenu(index, node_name, node_link, parts) {
                     $("#normalDIV #backNextMenu").html(backNextMenuHTML);
 
 
-                    // FIX FULLSCREEN
                     var htmlFullScreen = findAndReplace(backPartLink, 'javascript:exitFullscreenAndMove(\'' + backPartLink + '\')', backNextMenuHTML);
                     htmlFullScreen = findAndReplace(nextPartLink, 'javascript:exitFullscreenAndMove(\'' + nextPartLink + '\')', htmlFullScreen);
                     $("#fullscreenDIV #backNextMenu").html(htmlFullScreen);
@@ -720,7 +688,6 @@ function drawModulesMenu(index, node_name, node_link, parts) {
     html += '</li>';
 
     var htmlObj = $(html);
-    // console.log(htmlObj.find("a")); // TODO HERE
 
     $("#normalDIV #mnMenu .sessions").append(html);
     $("#fullscreenDIV #mnMenu .sessions").append(html);
@@ -728,36 +695,35 @@ function drawModulesMenu(index, node_name, node_link, parts) {
 
 
 
-/**** OTHERS ****/
-function getFullscreenElm () {
-    if( deploy_env == "ctools" ) 
-        return window.parent.document.getElementsByClassName(ctool_iframe_class)[0];    
-    if( deploy_env == "test" )
+function getFullscreenElm() {
+    if (deploy_env == "ctools")
+        return window.parent.document.getElementsByClassName(ctool_iframe_class)[0];
+    if (deploy_env == "test")
         return window.parent.document.getElementsByClassName(test_iframe_class)[0];
-    if( deploy_env == "" ) {
+    if (deploy_env == "") {
         return document;
     }
 }
 
-function getFullscreenElm2levels () {
-    if( deploy_env == "ctools" ) 
-        return window.parent.parent.document.getElementsByClassName(ctool_iframe_class)[0];    
+function getFullscreenElm2levels() {
+    if (deploy_env == "ctools")
+        return window.parent.parent.document.getElementsByClassName(ctool_iframe_class)[0];
     else
         return "";
 }
 
-function getExitFullscreenElm () {
-    if( deploy_env == "ctools" )
+function getExitFullscreenElm() {
+    if (deploy_env == "ctools")
         return parent.document;
-    if( deploy_env == "test" )
+    if (deploy_env == "test")
         return parent.document;
-    if( deploy_env == "" ) {
+    if (deploy_env == "") {
         return document;
     }
 }
 
-function getExitFullscreenElm2levels () { 
-    if( deploy_env == "ctools" )
+function getExitFullscreenElm2levels() {
+    if (deploy_env == "ctools")
         return parent.parent.document;
     else
         return "";

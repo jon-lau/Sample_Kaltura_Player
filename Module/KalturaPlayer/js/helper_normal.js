@@ -12,7 +12,6 @@
 
 function moveToSlide(slideId, second, slideDivIndex) {
     normalDoSeek(slideId, second);
-    console.log(slideId);
 
     $("#normalDIV .rightMenu .content .slide img").css("border-color", "#fff");
     $("#normalDIV .rightMenu .content .slide img#slide_" + slideDivIndex).css("border-color", "rgb(62, 190, 219)");
@@ -20,17 +19,7 @@ function moveToSlide(slideId, second, slideDivIndex) {
 
 
  function normalDoSeek(slideId, second) {
-
-//    drawSlidePointsDuration();
-
     myKdp.sendNotification("doSeek", convertHHMMSStoSeconds(second));
-
-    /*
-    setTimeout(
-        function(){ 
-            drawSlidePointsDuration(); 
-        }, 
-    1000);*/
 }
 
 function normalOpenVideosGrid() {
@@ -95,7 +84,6 @@ function normalChangeResoureTab(tab_index) {
 }
 
 function normalChangeSlideModeNext() {
-    console.log(globalSlideMode);
     if( globalSlideMode == null)
         globalSlideMode = 1;
 
@@ -103,11 +91,9 @@ function normalChangeSlideModeNext() {
         globalSlideMode = globalSlideMode + 3;
     else
         globalSlideMode = globalSlideMode - 3;
-    console.log(globalSlideMode);
 
     globalSlideMode = globalSlideMode % 7;
 
-    console.log("normal mode: " + globalSlideMode);
     normalChangeSlideMode(globalSlideMode);
 
 
@@ -161,7 +147,7 @@ function normalChangeSlideMode_AB( mode ) {
         iframe_video.css("left", normalModeB_Video_left );
         iframe_video.css("top", normalModeB_Video_top );
         iframe_video.css("width", normalModeB_Video_width );
-        iframe_video.css("height", /*normalModeB_Video_height */"100%" );
+        iframe_video.css("height","100%" );
         iframe_video.css("z-index", 0);
     }else
     if( mode == 5)
@@ -171,12 +157,8 @@ function normalChangeSlideMode_AB( mode ) {
         iframe_video.css("width", normalModeB_Slide_width);
         iframe_video.css("height", normalModeB_Slide_height);
         iframe_video.css("z-index", 100);
-
-        //if_slideCurrentSmall.css("left", normalModeB_Video_left + 172 / 2 );
-        //if_slideCurrentSmall.css("width", normalModeB_Video_width - 172 );
-
         if_slideCurrentSmall.css("top", 50 );
-        if_slideCurrentSmall.css("height", /*normalModeB_Video_height - 165*/ 565 );
+        if_slideCurrentSmall.css("height", 565 );
 
         var slideWidth = normalModeB_Video_width - 172;
         var slideLeft = normalModeB_Video_left + 172 / 2;
@@ -186,7 +168,7 @@ function normalChangeSlideMode_AB( mode ) {
             slideLeft = slideLeft + ((normalModeB_Video_width - 172) - slideWidth) / 2;
         }
         if_slideCurrentSmall.css("left", slideLeft );
-        if_slideCurrentSmall.css("width", slideWidth); // khoipn
+        if_slideCurrentSmall.css("width", slideWidth); 
         
         iframeBodyMwPlayer.css('background-color', "#EEE");
 
@@ -197,14 +179,14 @@ function normalChangeSlideMode_AB( mode ) {
         iframe_video.css("left", normalModeB_Video_left );
         iframe_video.css("top", normalModeB_Video_top );
         iframe_video.css("width", normalModeB_Video_width );
-        iframe_video.css("height", /*normalModeB_Video_height*/ "100%" );
+        iframe_video.css("height", "100%" );
     }else
     if( mode == 4)
     {
         iframe_video.hide();
         
-        if_slideCurrentSmall.css("top", /*normalModeB_Video_top + */ 50 );
-        if_slideCurrentSmall.css("height", /*normalModeB_Video_height - 165*/ 565 );
+        if_slideCurrentSmall.css("top", 50 );
+        if_slideCurrentSmall.css("height", 565 );
         
         var slideWidth = normalModeB_Video_width - 172;
         var slideLeft = normalModeB_Video_left + 172 / 2;
@@ -214,7 +196,7 @@ function normalChangeSlideMode_AB( mode ) {
             slideLeft = slideLeft + ((normalModeB_Video_width - 172) - slideWidth) / 2;
         }
         if_slideCurrentSmall.css("left", slideLeft );
-        if_slideCurrentSmall.css("width", slideWidth); // khoipn
+        if_slideCurrentSmall.css("width", slideWidth); 
         iframeBodyMwPlayer.css('background-color', "#EEE");
 
     }
@@ -233,9 +215,9 @@ function normalChangeSlideMode_C( mode ) {
     iframeBodyMwPlayer.css('background-color', "#000");
 
 
-    var split_height = 281; // ($("#player").height() - $(".topMenu").height() - $(".bottomBar").height() - 35) / 2;
-    var split_width = 375; // iframe_video.width() * split_height / iframe_video.height();
-    var split_left = (/*iframe_video.width()*/1024 - split_width) / 2;
+    var split_height = 281; 
+    var split_width = 375; 
+    var split_left = (1024 - split_width) / 2;
     iframe_video.show();
 
     if( mode == 3 ) {
@@ -300,7 +282,6 @@ function normalChangeSlideMode_C( mode ) {
 
     }else
     if( mode == 6) {
-        //$(".fullscreen .videoDisplay #player").show();
         iframe_video.css("top", split_height + 55 );
         if_slideCurrentLarge.css("top", 50);
 
@@ -319,7 +300,7 @@ function normalChangeSlideModeMenu(mode) {
     }
     if( globalSlideMode == 2 ) {
         switch (mode) {
-            case 1: mode = 1;break; // do nothing
+            case 1: mode = 1;break; 
             case 2: mode = 0;break;
             case 3: mode = 3;break;
         }
@@ -411,8 +392,6 @@ function initWhenRealReady() {
     var iframe_cc = $("#player_ifp").contents().find("body").find('div[data-plugin-name*=closedCaptions]');
     iframe_cc.css("margin-bottom", "114px");
 
-    //closedCaptions 
-
     window.myKdp.sendNotification("changeVolume", globalCurrentVolume);
     fixUI_videoHolder();
     fixUI_captionOverlay();
@@ -428,19 +407,17 @@ function initWhenRealReady() {
 var countWaitToStopVideo = 0;
 
 function waitToStopVideo(myKdp) {
-        if( DEVICE_PLATFORM == "android" ) { // khoipn testing
+        if( DEVICE_PLATFORM == "android" ) { 
             initWhenRealReady();            
             return;
         }
 
-        console.log("-- doPause");
         myKdp.sendNotification("doPause");
         setTimeout(function () {
             initWhenRealReady();            
         }, 100);
 
 
-    // Fix for both PC & ipad
     fixIpad_InitVideo();
     fixUI_controlBar();
     fixUI_caption();
@@ -464,13 +441,12 @@ function InitToRun(myKdp) {
         return;
     }
 
-    if( DEVICE_PLATFORM == "android" ) { // khoipn testing
+    if( DEVICE_PLATFORM == "android" ) { 
 
         setTimeout(function () {                        
             initWhenRealReady();            
         }, 100);
 
-        // Fix for both PC & ipad
         fixAndroid_InitVideo();
 
         setTimeout(function () {
@@ -486,16 +462,13 @@ function InitToRun(myKdp) {
 
     if( globalPlayingSecond <= 0 ) {       
         
-        // Step 1: muted
         setTimeout(function () {
             myKdp.sendNotification("changeVolume", 0.01);
-            console.log("-- changeVolume");
 
             setTimeout(function () {
                 setTimeout(function () {
                     waitToStopVideo(myKdp);
-                }, 100); //Reduced Delay
-
+                }, 100);
             }, 400);
 
         }, 200);
