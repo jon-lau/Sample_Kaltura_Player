@@ -44,8 +44,7 @@ var HTML5VideoPlayer = function (playerId, kWidget) {
             'noticeMessage': {
                 'text': 'Advertisment {sequenceProxy.timeRemaining|timeFormat}'
             },
-            /*
-            "related": {}, */
+
             "playPauseBtn": {},
             "volumeControl": {},
             "fullScreenBtn": {},
@@ -70,9 +69,7 @@ var HTML5VideoPlayer = function (playerId, kWidget) {
 };
 
 
-// KHOIPN TODO: Check production env here
 HTML5VideoPlayer.prototype.setEntryId = function (entry_id) {
-    // Set Video sources
     this.mediaProxy.sources = [
         {
             "src": "https://cdnsecakmi.kaltura.com/p/1038472/sp/35960161/playManifest/entryId/" + entry_id + "/format/url/protocol/http/a.mp4",
@@ -95,7 +92,6 @@ HTML5VideoPlayer.prototype.setEntryId = function (entry_id) {
 
     this.kWidget.uiconf_id = entry_id;
 
-    // Set thumbs               
     this.mediaProxy.entryMetadata.thumbSlicesUrl = "https://cdnsecakmi.kaltura.com/p/1038472/sp/35960161/thumbnail/entry_id/" + entry_id + "/version/100003/width/100/vid_slices/100";
     this.mediaProxy.entry.thumbnailUrl = "https://cdnsecakmi.kaltura.com/p/1038472/sp/35960161/thumbnail/entry_id/" + entry_id + "/version/100003/width/640"
 };
@@ -132,7 +128,6 @@ HTML5VideoPlayer.prototype.fillData = function (theSession) {
             );
     globalXMLSlidesPath = XMLSlidesPath;
 
-    // Read videos array (old version)
     globalVideosArray = readXMLVideos(XMLSlidesPath);
 
     $("#fullscreenDIV .videosGrid .video_items").html("");
@@ -174,11 +169,10 @@ HTML5VideoPlayer.prototype.initPlayer = function () {
 
     this.kWidget.featureConfig({
         'targetId': this.playerId,
-        'wid': '_1038472', //'_1830881',
-        'uiconf_id': '35960161',// '26685961', // KHOIPN: neu ko co thi no cha ra cai me j
-        'entry_id': theSession["video"], // '1_fll8azw9', // '1_he547nm2',
-        /*
-         'uiconf_id': '28852071',*/
+        'wid': '_1038472', 
+        'uiconf_id': '35960161',
+        'entry_id': theSession["video"], 
+
         'flashvars': {
             'autoPlay': false,
             'mediaProxy': this.mediaProxy,
@@ -192,8 +186,7 @@ HTML5VideoPlayer.prototype.initPlayer = function () {
                 'iframeHTML5Js': 'KalturaPlayer/js/helper_libs.js',
                 'iframeHTML5Js1': 'KalturaPlayer/js/helper_data.js',
                 'iframeHTML5Js2': 'KalturaPlayer/libs/jquery.poshytip.min.js',
-                // 'iframeHTML5Js3': 'KalturaPlayer/js/helper_fullscreen.js',
-                "iframeHTML5Css": "KalturaPlayer/css/kaltura_styles.css" // you components css
+                "iframeHTML5Css": "KalturaPlayer/css/kaltura_styles.css" 
             },
             'closedCaptions': {
                 'plugin': true,
@@ -227,9 +220,6 @@ HTML5VideoPlayer.prototype.initPlayer = function () {
 
             var seekToEndVideo;
 
-            // FIX BUG 1 - khoipn
-
-            // Fullscreen fix ajax loading ----------<<
             var iframeBodyMwPlayer = $("#player_ifp").contents().find("body").find('div[class*="mwPlayerContainer"]');
 
             iframeBodyMwPlayer.append($('#fullscreenDIV'));
@@ -244,19 +234,16 @@ HTML5VideoPlayer.prototype.initPlayer = function () {
                     );
 
             myKdp.kBind('openFullScreen', function () {
-                //bindOnFullscreen("open");
 
                 return 0;
             });
 
             myKdp.kBind('closeFullScreen', function () {
-                //bindOnFullscreen("close");
                 return 0;
 
             });
 
             myKdp.kBind('doSeek', function () {
-                console.log("doSeek");
 
                 if( isVideoRunning == false ) {
                     fixSeekPlay();
@@ -274,28 +261,20 @@ HTML5VideoPlayer.prototype.initPlayer = function () {
             
 
             myKdp.kBind('ccDataLoaded', function () {
-                console.log('ccDataLoaded');
             });
             myKdp.kBind('newClosedCaptionsData', function () {
-                console.log('newClosedCaptionsData');
             });
             myKdp.kBind('changedClosedCaptions', function (event) {
-                console.log('changedClosedCaptions');
-                //console.log(event);
             });
             myKdp.kBind('closedCaptionsHidden', function () {
-                console.log('closedCaptionsHidden');
             });
             myKdp.kBind('ccDisplayed', function (event) {
-                console.log('ccDisplayed');
             });
 
             myKdp.kBind('volumeChanged', function (e) {
-                //console.log('----- volumeChanged');
                 var newVolume = parseFloat(e.newVolume);
                 if( newVolume != 0.01 ) {
                     globalCurrentVolume = newVolume;
-                    console.log( globalCurrentVolume );
                 }
                 
             });
@@ -319,7 +298,6 @@ HTML5VideoPlayer.prototype.initPlayer = function () {
 
             myKdp.kBind('doPause', function () {
                 isVideoRunning = false;
-                console.log("doPause");      
             });
 
             myKdp.kBind('doStop', function () {
@@ -328,19 +306,12 @@ HTML5VideoPlayer.prototype.initPlayer = function () {
                     seekToEndVideo = true;
                     myKdp.sendNotification("doSeek", myKdp.evaluate("{duration}"));
                 }
-                console.log("doStop");
             });
 
             myKdp.kBind('playerPlayEnd', function () {
-                console.log("playerPlayEnd");
                 myKdp.sendNotification("doPause");
                 seekToEndVideo = false;
                 isVideoRunning = false;
-                /*
-                setTimeout(function () {
-                    myKdp.sendNotification("doSeek", 0.1);
-                }, 100); */
-                //finishVideoPause();
             });
 
 
@@ -348,19 +319,12 @@ HTML5VideoPlayer.prototype.initPlayer = function () {
             hideShowNormalSlidesArrows();
 
             InitToRun(myKdp);
-            /*
-            $("#player_ifp").contents().find("a").focus(function(){
-                console.log("xxx");
-                $(this).blur();
-            });
-            */
         }
     });
 };
 
-function fixSeekPlay() { // khoipn: next o day
+function fixSeekPlay() { 
     return;
-    console.log("fixSeekPlay " + isVideoRunning);
     if( isVideoRunning == false ) {
         setTimeout(function () {
             fixSeekPlay();            
@@ -378,7 +342,6 @@ function initFullscreenMode() {
             initFullscreenMode();
         }, 500);
     } else {
-        console.log("init full screen ok!");
         if(DEVICE_PLATFORM == "iphone"){
             $(".full2").hide();
 
@@ -386,18 +349,6 @@ function initFullscreenMode() {
     }
 
 }
-
-/*function finishVideoPause() {
-    var duration_item = $("#player_ifp").contents().find("body").find('div[class*="durationLabel"]');
-    var duration_str = duration_item[0].innerText.replace("/", "").trim();
-    var duration_array = duration_str.split(":");
-
-    if (duration_array.length <= 2)
-        duration_second = parseInt(duration_array[0]) * 60 + parseInt(duration_array[1]);
-    else
-        duration_second = parseInt(duration_array[0]) * 60 * 60 + parseInt(duration_array[1]) * 60 + parseInt(duration_array[2]);
-     myKdp.sendNotification("doSeek", duration_second);
-}*/
 
 var currentSlide = 0;
 var currentSlideUrl = "";
@@ -407,7 +358,6 @@ function drawSlidePointsDuration() {
     if (duration_second != 0)
         return;
 
-    // Clear before fill data
     $("#slidePointsDuration").text("");
 
     var duration_item = $("#player_ifp").contents().find("body").find('div[class*="durationLabel"]');
@@ -425,35 +375,12 @@ function drawSlidePointsDuration() {
             $("#slidePointsDuration").append("<a title='Move to slide' href=\"javascript:moveToSlide( '','" + globalSlidesArray[i].attributes[1].nodeValue + "',"+ i +")\"><div style='background: #ffdd83;position: absolute;left: " + Math.floor(1024 * point / duration_second) + "px; bottom: -33px;width: 2px;height: 9px;z-index:0'></div></a>");
         }
 
-        // FINISH ALL
+
 
     }
 }
 
-/*function checkFinishVideo( data, id) {
-    console.log( data );
-    console.log(duration_second);
-    
-    if( duration_second > 0)
-    if( parseFloat(data) + 1 >= duration_second ) {
-        window.myKdp.sendNotification("doPause");
-
-        console.log("Finish video");
-
-        // Fix bug: ko quay ve dau tien (khoipn)
-        setTimeout(function () {
-            window.myKdp.sendNotification("doSeek", 0);
-        }, 100);
-        
-
-        //console.log("Check finish video");    
-    }
-}*/
-
 function bindPlayerRunning(data, id) {
-
-    //console.log("running" + data);
-    //checkFinishVideo(data, id );
     isVideoRunning = true;
 
     globalPlayingSecond = data;
@@ -463,7 +390,6 @@ function bindPlayerRunning(data, id) {
         createCookie("globalIsFisrtRunning", "1", 1);
 
     drawSlidePointsDuration();
-    //console.log(data);
 
     for (i = 0; i < globalSlidesArray.length; i++) {
         var timeLeft = convertHHMMSStoSeconds(globalSlidesArray[i].attributes[1].nodeValue);
@@ -495,8 +421,6 @@ function bindPlayerRunning(data, id) {
 }
 
 function refreshSlides() {
-
-    // full screen mode
     var iframe = $("#player_ifp").contents().find("body").find('div[id=fullscreenDIV]');
     var iframe_slides = iframe.contents().find('div[id=slides]');
     iframe_slides.find("img").css("border-color", "#FFF");
@@ -528,7 +452,6 @@ function refreshSlides() {
     });
 }
 
-// var isMoveFullscreen = 0;
 function bindOnFullscreen(action) {
     var iframe = $("#player_ifp").contents().find("body").find('div[id=fullscreenDIV]');
 
@@ -547,8 +470,6 @@ function bindOnFullscreen(action) {
 
         if (slideMode != null)
             setTimeout(function () {
-                //$(".fullscreen .videoDisplay #player").hide();
-                //fullscreenChangeSlideMode(readCookie("slidemode"));
             }, 300);
     } else
     if (action == "close") {
@@ -561,11 +482,7 @@ function bindOnFullscreen(action) {
             }, 500);
         }
     }
-
-
-    console.log("Fullscreen inverted!!!");
     bottomBarContent(0);
-
 }
 
 
