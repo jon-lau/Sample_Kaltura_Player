@@ -57,7 +57,6 @@ function parseUrl(theSession) {
             theSession["video"] = params[3];
     }
 
-    // save played status to cookies
     createCookie(theSession["video"], "1", 1);
 
 }
@@ -72,8 +71,7 @@ function substringEx(input, length) {
 
 
 function convertHHMMSStoSeconds(hms) {
-    var a = hms.split(':'); // split it at the colons
-    // minutes are worth 60 seconds. Hours are worth 60 minutes.
+    var a = hms.split(':'); 
     var seconds = (+a[0]) * 60 * 60 + (+a[1]) * 60 + (+a[2]);
     return seconds;
 }
@@ -99,42 +97,12 @@ function showPNG( url ) {
     PopupCenterInnerPNG(url, "Slide Viewer", 0, 0);
 }
 
-
-/*
-function PopupCenter(url, title, w, h) {
-    // Fixes dual-screen position                         Most browsers      Firefox
-    var dualScreenLeft = window.screenLeft != undefined ? window.screenLeft : screen.left;
-    var dualScreenTop = window.screenTop != undefined ? window.screenTop : screen.top;
-
-    var width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
-    var height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
-
-    var left = ((width / 2) - (w / 2)) + dualScreenLeft;
-    var top = ((height / 2) - (h / 2)) + dualScreenTop;
-    var newWindow = window.open(url, title, 'scrollbars=no,location=no,menubar=no,titlebar=no.,status=no,toolbar=no, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
-
-    // Puts focus on the newWindow
-    if (window.focus) {
-        newWindow.focus();
-    }
-}*/
-
 function PopupCenterInnerPNG(url, title, w, h) {
     $("#myModal .modal-body .content-iframe").attr('src', url);
     $("#myModal").modal();
 }
 
 function PopupCenterInnerPDF(url, title, w, h) {
-    /*
-    var originURL = window.location.protocol + "//" + window.location.host + "/" + window.location.pathname;
-    originURL = originURL.replace("index.html", "");
-
-    var google_url = "http://docs.google.com/gview?url=" + originURL + url + "&embedded=true";
-    if( google_url.includes("localhost") )
-        google_url = url;
-    */
-
-
     $("#myModalPDF .modal-body .content-iframe").attr('src', url);
     $("#myModalPDF").modal();
 }

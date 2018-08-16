@@ -24,9 +24,6 @@ $.fn.scale = function (x) {
         'position': 'absolute',
         'top': (top + 'px'),
         'left': (left + 'px'),
-        /*
-         'bottom': '0',
-         'right': '0',*/
     });
     $(this).parent()
             .width($(this).data('originalWidth') * x)
@@ -138,13 +135,10 @@ function invertFullScreen() {
 
 
 function doFullScreen(docElm) {
-    var isInFullScreen = (docElm.fullScreenElement && docElm.fullScreenElement !== null) || // alternative standard method
+    var isInFullScreen = (docElm.fullScreenElement && docElm.fullScreenElement !== null) || 
             (docElm.mozFullScreen || docElm.webkitIsFullScreen);
             console.log("run fullscreen");
-    // NOTE -->        
     if( DEVICE_PLATFORM == "ipad") {        
-        
-        //$("#player").addClass("fullscreen_ipad");        
         return;
 
     }
@@ -153,23 +147,13 @@ function doFullScreen(docElm) {
 
         if (deploy_env == "")
             docElm = docElm.documentElement;
-
-        // NOTE -->
-        /*
-        if( DEVICE_PLATFORM == "ipad")
-            docElm = document.body; */
-
         if (docElm.requestFullscreen) {
-            console.log("requestFullscreen");
             docElm.requestFullscreen();
         } else if (docElm.msRequestFullscreen) {
-            console.log("msRequestFullscreen");
             docElm.msRequestFullscreen();
         } else if (docElm.mozRequestFullScreen) {
-            console.log("mozRequestFullScreen");
             docElm.mozRequestFullScreen();
         } else if (docElm.webkitRequestFullScreen) {
-            console.log("webkitRequestFullScreen");
             docElm.webkitRequestFullScreen();
         }
         $("body").css("overflow", "hidden");
