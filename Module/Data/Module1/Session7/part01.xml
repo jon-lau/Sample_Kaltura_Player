@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<data>
+  <video id="1_gcyn66xs" title="Preview" thumbnail="#" content="#">
+    <relatedvideos>
+      <relate id="1_gcyn66xs" title="Preview" thumbnail="#" content="#"/>
+    </relatedvideos>
+    <cuepoints>
+      <cuepoint id="VID01" time="00:00:00" src="media/Slide01.png"/>
+    </cuepoints>
+    <resources/>
+    <supplements/>
+  </video>
+</data>

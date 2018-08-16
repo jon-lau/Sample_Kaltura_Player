@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<data>
+  <video id="1_akgbodur" title="Video A: Mathematics: The use of mathematical language" thumbnail="#" content="#">
+    <relatedvideos>
+      <relate id="1_akgbodur" title="Video A: Mathematics: The use of mathematical language" thumbnail="#" content="#"/>
+      <relate id="1_zgzka0ay" title="Video B: Mathematics: Attending to the whole when working with fractions" thumbnail="#" content="#" grid="true"/>
+      <relate id="1_jgbgktyl" title="Video C: Student thinking: “Taking” fraction parts" thumbnail="#" content="#" grid="true"/>
+    </relatedvideos>
+    <cuepoints>
+      <cuepoint id="VID01" time="00:00:00" src="media/Slides/Slide09.png"/>
+    </cuepoints>
+    <resources/>
+    <supplements/>
+  </video>
+  <video id="1_zgzka0ay" title="Video B: Mathematics: Attending to the whole when working with fractions" thumbnail="#" content="#">
+    <cuepoints>
+      <cuepoint id="VID01" time="00:00:00" src="media/Slides/Slide09.png"/>
+    </cuepoints>
+    <resources/>
+    <supplements/>
+  </video>
+  <video id="1_jgbgktyl" title="Video C: Student thinking: “Taking” fraction parts" thumbnail="#" content="#">
+    <cuepoints>
+      <cuepoint id="VID01" time="00:00:00" src="media/Slides/Slide09.png"/>
+    </cuepoints>
+    <resources/>
+    <supplements/>
+  </video>
+</data>

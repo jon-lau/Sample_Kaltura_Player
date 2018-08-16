@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<data>
+  <video id="1_6qadrqy4" title="Video A: Clarifying the problem" thumbnail="#" content="#">
+    <relatedvideos>
+      <relate id="1_6qadrqy4" title="Video A: Clarifying the problem" thumbnail="#" content="#"/>
+      <relate id="1_x1z911t3" title="Video B: Describing the use of a representation" thumbnail="#" content="#"/>
+      <relate id="1_sl7jv8hb" title="Video C: Summarizing the discussion" thumbnail="#" content="#"/>
+    </relatedvideos>
+    <cuepoints>
+      <cuepoint id="VID01" time="00:00:00" src="media/Slide03.png"/>
+    </cuepoints>
+    <resources>
+      <resource id="1" name="Transcript: Clarifying the problem" src="media/s08_p3a_clarifying-the-problem_transcript.pdf"/>
+      <resource id="2" name="Transcript: Describing the use of a representation" src="media/s08_p3b_describing-use-of-representation_transcript.pdf"/>
+      <resource id="3" name="Transcript: Summarizing the discussion" src="media/s08_p3c_summarizing-the-discussion_transcript.pdf"/>
+    </resources>
+    <supplements/>
+  </video>
+  <video id="1_x1z911t3" title="Video B: Describing the use of a representation" thumbnail="#" content="#">
+    <cuepoints>
+      <cuepoint id="VID01" time="00:00:00" src="media/Slide03.png"/>
+    </cuepoints>
+    <resources>
+      <resource id="1" name="Transcript: Clarifying the problem" src="media/s08_p3a_clarifying-the-problem_transcript.pdf"/>
+      <resource id="2" name="Transcript: Describing the use of a representation" src="media/s08_p3b_describing-use-of-representation_transcript.pdf"/>
+      <resource id="3" name="Transcript: Summarizing the discussion" src="media/s08_p3c_summarizing-the-discussion_transcript.pdf"/>
+    </resources>
+    <supplements/>
+  </video>
+  <video id="1_sl7jv8hb" title="Video C: Summarizing the discussion" thumbnail="#" content="#">
+    <cuepoints>
+      <cuepoint id="VID01" time="00:00:00" src="media/Slide03.png"/>
+    </cuepoints>
+    <resources>
+      <resource id="1" name="Transcript: Clarifying the problem" src="media/s08_p3a_clarifying-the-problem_transcript.pdf"/>
+      <resource id="2" name="Transcript: Describing the use of a representation" src="media/s08_p3b_describing-use-of-representation_transcript.pdf"/>
+      <resource id="3" name="Transcript: Summarizing the discussion" src="media/s08_p3c_summarizing-the-discussion_transcript.pdf"/>
+    </resources>
+    <supplements/>
+  </video>
+</data>

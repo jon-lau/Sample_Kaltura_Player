@@ -1,0 +1,69 @@
+<?xml version="1.0" ?>
+<data>
+
+<!-- MAIN VIDEO -->
+  <video id="1_q63d3uis" title="Showing and explaining equivalence" thumbnail="#" content="#">
+    <relatedvideos>
+    </relatedvideos>
+    <cuepoints>
+      <cuepoint id="VID01" time="00:00:00" src="media/Slide04.png"/>
+    </cuepoints>
+    <resources>
+    	<!-- Slides -->
+    	<resource id="1" name="Slide: Representations of fraction equivalence" src="media/Slide04.png"/>
+
+     	 <!-- Image Gallery (Textbook Examples) -->
+     	 <resource id="2" name="Textbook Example A: Equation" src="media/everyday-mathematics_grade1_p190.png"/>
+    	  <resource id="3" name="Textbook Example B: Set model" src="media/scott-foresman_grade5_p410.png"/>
+     	 <resource id="4" name="Textbook Example C: Area model" src="media/math-trailblazers_grade5_p77.png"/>
+    	  <resource id="5" name="Textbook Example D: Number line" src="media/everyday-mathematics_grade3_p673.png"/>
+    	  <resource id="6" name="Textbook Example E: Ruler" src="media/heath-mathematics_grade5_p266.png"/>
+    	  <resource id="7" name="Textbook Example F: Multiplication and division" src="media/harcourt_grade4_p321.png"/>
+    	  <!--<div class="citation">Maletsky, E. M., Andrews, A. G., Luckie, L. A., Burton, G. M., McLeod, J. C., Johnson, H. C., et al. (2002). <em>Harcourt math, California edition, Grade 4</em> (pp. 321). Orlando, FL: Harcourt School Publishers.</div>-->
+
+     	 <!-- Handouts -->
+     	 <resource id="7" name="Handout: Textbook examples of fraction equivalence" src="media/s09_p5_textbook-examples-equivalence.pdf"/>
+    </resources>
+
+    <!-- Begin Supplements -->
+    <supplements>
+    	<supplement id="1" name="Math Notes: Methods for generating and explaining equivalent fractions" src="media/s09_p5_mathnotes_equivalent-fraction.pdf"/>
+    </supplements>
+    <!-- End Supplements -->
+  </video>
+
+
+<!-- SUPPLEMENT VIDEO -->
+<video id="1_ofyd95n0" title="Video: Challenges in getting at student thinking" thumbnail="#" content="#">
+    <relatedvideos>
+    </relatedvideos>
+    <cuepoints>
+    	<cuepoint id="VID01" time="00:00:00" src="media/noslide.png"/>
+    </cuepoints>
+
+    <!-- Resources -->
+    <resources>
+    	<!-- Slides -->
+    	<resource id="1" name="Slide: Representations of fraction equivalence" src="media/Slide04.png"/>
+
+     	 <!-- Image Gallery (Textbook Examples) -->
+     	 <resource id="2" name="Textbook Example A: Equation" src="media/everyday-mathematics_grade1_p190.png"/>
+    	  <resource id="3" name="Textbook Example B: Set model" src="media/scott-foresman_grade5_p410.png"/>
+     	 <resource id="4" name="Textbook Example C: Area model" src="media/math-trailblazers_grade5_p77.png"/>
+    	  <resource id="5" name="Textbook Example D: Number line" src="media/everyday-mathematics_grade3_p673.png"/>
+    	  <resource id="6" name="Textbook Example E: Ruler" src="media/heath-mathematics_grade5_p266.png"/>
+    	  <resource id="7" name="Textbook Example F: Multiplication and division" src="media/harcourt_grade4_p321.png"/>
+    	 <!-- <div class="citation">Maletsky, E. M., Andrews, A. G., Luckie, L. A., Burton, G. M., McLeod, J. C., Johnson, H. C., et al. (2002). <em>Harcourt math, California edition, Grade 4</em> (pp. 321). Orlando, FL: Harcourt School Publishers.</div>-->
+
+     	 <!-- Handouts -->
+     	 <resource id="8" name="Handout: Textbook examples of fraction equivalence" src="media/s09_p5_textbook-examples-equivalence.pdf"/>
+    </resources>
+
+    <!-- Begin Supplements -->
+    <supplements>
+    	<supplement id="1" name="Math Notes: Methods for generating and explaining equivalent fractions" src="media/s09_p5_mathnotes_equivalent-fraction.pdf"/>
+    </supplements>
+    <!-- End Supplements -->
+</video>
+
+</data>

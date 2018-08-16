@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<data>
+  <video id="1_ttessaiv" title="A process for planning for and learning from the use of public recording space" thumbnail="#" content="#">
+    <relatedvideos>
+      <relate id="1_ttessaiv" title="A process for planning for and learning from the use of public recording space" thumbnail="#" content="#"/>
+    </relatedvideos>
+    <cuepoints>
+      <cuepoint id="VID01" time="00:00:00" src="media/Slide08.png"/>
+      <cuepoint id="VID02" time="00:00:46" src="media/Slide09.png"/>
+    </cuepoints>
+    <resources>
+      <resource id="1" name="Slide: Planning for and learning from the use of public recording space" src="media/Slide09.png"/>
+    </resources>
+    <supplements>
+      <supplement id="1" name="Handout: Sample board plan" src="media/s06_p5_board-plan-example-from-slide.pdf"/>
+    </supplements>
+  </video>
+</data>

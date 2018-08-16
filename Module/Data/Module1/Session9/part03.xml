@@ -1,0 +1,111 @@
+<?xml version="1.0" ?>
+<data>
+  <!-- PLACEHOLDER VIDEO - UNCOMMENT WHEN PLACEHOLDER READY -->
+  <!--<video id="PLACEHOLDER" title="Image: Common denominator (1/4 and 5/8)" thumbnail="#" content="#">
+    <relatedvideos>
+      <relate id="PLACEHOLDER" title="Image: Common denominator (1/4 and 5/8)" thumbnail="#" content="#"/>
+      <relate id="1_i4pz3z02" title="Video A: Common denominators – Using the identity property Why does multiplying by 5/5 generate an equivalent fraction?" thumbnail="#" content="#"/>
+      <relate id="1_73znr4or" title="Video B: Common denominator – Why is multiplication used Why wouldn’t subtracting 2/2 generate an equivalent fraction?" thumbnail="#" content="#"/>
+      <relate id="1_mxwlsij0" title="Video C: Common denominators – Other parts of the process to consider How do you think about which equivalent fraction to generate?" thumbnail="#" content="#"/>
+      <relate id="1_a07fv8u0" title="Video D: Common numerator (2/3 and 2/5)" thumbnail="#" content="#"/>
+      <relate id="1_gotfx37t" title="Video E: More and less than one whole (4/3 and 14/15)" thumbnail="#" content="#"/>
+      <relate id="1_r0rncs9d" title="Video F: Distance from one whole (3/4 and 14/15)" thumbnail="#" content="#"/>
+    </relatedvideos>
+    <cuepoints>
+      <cuepoint id="#"/>
+    </cuepoints>
+    <resources>
+      <resource id="1" name="Slide: A working definition of a fraction (Session 3)" src="media/S3Slide05.png"/>
+    </resources>
+    <supplements>
+      <supplement id="1" name="Math notes: Strategies for comparing fractions " src="media/s09_p3_mathnotes_comparing-fractions.pdf"/>
+    </supplements>
+  </video>-->
+
+<!-- VIDEO A -->
+  <video id="1_i4pz3z02" title="Video A: Common denominators – Using the identity property Why does multiplying by 5/5 generate an equivalent fraction?" thumbnail="#" content="#">
+    <cuepoints>
+      <cuepoint id="VID01" time="00:00:00" src="media/Slide03.png"/>
+    </cuepoints>
+    <relatedvideos>
+      <!--<relate id="PLACEHOLDER" title="Image: Common denominator (1/4 and 5/8)" thumbnail="#" content="#"/>-->
+      <relate id="1_i4pz3z02" title="Video A: Common denominators – Using the identity property Why does multiplying by 5/5 generate an equivalent fraction?" thumbnail="#" content="#"/>
+      <relate id="1_73znr4or" title="Video B: Common denominator – Why is multiplication used Why wouldn’t subtracting 2/2 generate an equivalent fraction?" thumbnail="#" content="#"/>
+      <relate id="1_mxwlsij0" title="Video C: Common denominators – Other parts of the process to consider How do you think about which equivalent fraction to generate?" thumbnail="#" content="#"/>
+      <relate id="1_a07fv8u0" title="Video D: Common numerator (2/3 and 2/5)" thumbnail="#" content="#"/>
+      <relate id="1_gotfx37t" title="Video E: More and less than one whole (4/3 and 14/15)" thumbnail="#" content="#"/>
+      <relate id="1_r0rncs9d" title="Video F: Distance from one whole (3/4 and 14/15)" thumbnail="#" content="#"/>
+    </relatedvideos>
+    <resources>
+      <resource id="1" name="Slide: A working definition of a fraction (Session 3)" src="media/S3Slide05.png"/>
+    </resources>
+    <supplements>
+      <supplement id="1" name="Math notes: Strategies for comparing fractions " src="media/s09_p3_mathnotes_comparing-fractions.pdf"/>
+    </supplements>
+  </video>
+
+<!-- VIDEO B -->
+  <video id="1_73znr4or" title="Video B: Common denominator – Why is multiplication used Why wouldn’t subtracting 2/2 generate an equivalent fraction?" thumbnail="#" content="#">
+    <cuepoints>
+      <cuepoint id="VID01" time="00:00:00" src="media/Slide03.png"/>
+    </cuepoints>
+    <resources>
+      <resource id="1" name="Slide: A working definition of a fraction (Session 3)" src="media/S3Slide05.png"/>
+    </resources>
+    <supplements>
+      <supplement id="1" name="Math notes: Strategies for comparing fractions " src="media/s09_p3_mathnotes_comparing-fractions.pdf"/>
+    </supplements>
+  </video>
+
+<!-- VIDEO C -->
+  <video id="1_mxwlsij0" title="Video C: Common denominators – Other parts of the process to consider How do you think about which equivalent fraction to generate?" thumbnail="#" content="#">
+    <cuepoints>
+      <cuepoint id="VID01" time="00:00:00" src="media/Slide03.png"/>
+    </cuepoints>
+    <resources>
+      <resource id="1" name="Slide: A working definition of a fraction (Session 3)" src="media/S3Slide05.png"/>
+    </resources>
+    <supplements>
+      <supplement id="1" name="Math notes: Strategies for comparing fractions " src="media/s09_p3_mathnotes_comparing-fractions.pdf"/>
+    </supplements>
+  </video>
+
+<!-- VIDEO D -->
+  <video id="1_a07fv8u0" title="Video D: Common numerator (2/3 and 2/5)" thumbnail="#" content="#">
+    <cuepoints>
+      <cuepoint id="VID01" time="00:00:00" src="media/Slide03.png"/>
+    </cuepoints>
+    <resources>
+      <resource id="1" name="Slide: A working definition of a fraction (Session 3)" src="media/S3Slide05.png"/>
+    </resources>
+    <supplements>
+      <supplement id="1" name="Math notes: Strategies for comparing fractions " src="media/s09_p3_mathnotes_comparing-fractions.pdf"/>
+    </supplements>
+  </video>
+
+<!-- VIDEO E -->
+  <video id="1_gotfx37t" title="Video E: More and less than one whole (4/3 and 14/15)" thumbnail="#" content="#">
+    <cuepoints>
+      <cuepoint id="VID01" time="00:00:00" src="media/Slide03.png"/>
+    </cuepoints>
+    <resources>
+      <resource id="1" name="Slide: A working definition of a fraction (Session 3)" src="media/S3Slide05.png"/>
+    </resources>
+    <supplements>
+      <supplement id="1" name="Math notes: Strategies for comparing fractions " src="media/s09_p3_mathnotes_comparing-fractions.pdf"/>
+    </supplements>
+  </video>
+
+<!-- VIDEO F -->
+  <video id="1_r0rncs9d" title="Video F: Distance from one whole (3/4 and 14/15)" thumbnail="#" content="#">
+    <cuepoints>
+      <cuepoint id="VID01" time="00:00:00" src="media/Slide03.png"/>
+    </cuepoints>
+    <resources>
+      <resource id="1" name="Slide: A working definition of a fraction (Session 3)" src="media/S3Slide05.png"/>
+    </resources>
+    <supplements>
+      <supplement id="1" name="Math notes: Strategies for comparing fractions " src="media/s09_p3_mathnotes_comparing-fractions.pdf"/>
+    </supplements>
+  </video>
+</data>

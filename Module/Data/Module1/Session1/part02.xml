@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<data>
+  <video id="1_5dm1puuh" title="Video A: The challenges in learning about teaching" thumbnail="#" content="#">
+    <relatedvideos>
+      <relate id="1_5dm1puuh" title="Video A: The challenges in learning about teaching" thumbnail="#" content="#"/>
+      <relate id="1_a2r5ca0m" title="Video B: Experience with video (example 1)" thumbnail="#" content="#" grid="true"/>
+      <relate id="1_rs6dsa9w" title="Video C: Experience with video (example 2)" thumbnail="#" content="#" grid="true"/>
+      <relate id="1_zzdeweca" title="Video D: Studying mathematics teaching in records of practice" thumbnail="#" content="#" grid="true"/>
+    </relatedvideos>
+    <cuepoints>
+      <cuepoint id="VID01" time="00:00:00" src="media/Slides/Slide06.png"/>
+    </cuepoints>
+    <resources/>
+    <supplements/>
+  </video>
+  <video id="1_a2r5ca0m" title="Video B: Experience with video (example 1)" thumbnail="#" content="#">
+    <cuepoints>
+      <cuepoint id="VID01" time="00:00:00" src="media/Slides/Slide06.png"/>
+    </cuepoints>
+    <resources/>
+    <supplements/>
+  </video>
+  <video id="1_rs6dsa9w" title="Video C: Experience with video (example 2)" thumbnail="#" content="#">
+    <cuepoints>
+      <cuepoint id="VID01" time="00:00:00" src="media/Slides/Slide06.png"/>
+    </cuepoints>
+    <resources/>
+    <supplements/>
+  </video>
+  <video id="1_zzdeweca" title="Video D: Studying mathematics teaching in records of practice" thumbnail="#" content="#">
+    <cuepoints>
+      <cuepoint id="VID01" time="00:00:00" src="media/Slides/Slide06.png"/>
+    </cuepoints>
+    <resources/>
+    <supplements/>
+  </video>
+</data>

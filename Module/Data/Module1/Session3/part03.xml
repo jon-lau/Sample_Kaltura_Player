@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<data>
+  <video id="1_z1v9pxn8" title="Video A: Four people sharing three bottles Q. In this interpretation, which is ¾–the shaded or unshaded?" thumbnail="#" content="#">
+    <relatedvideos>
+      <relate id="1_z1v9pxn8" title="Video A: Four people sharing three bottles Q. In this interpretation, which is ¾–the shaded or unshaded?" thumbnail="#" content="#"/>
+      <relate id="1_4ofxvsph" title="Video B: Green pieces vs. white pieces Q. What is the whole in this interpretation?" thumbnail="#" content="#" grid="true"/>
+      <relate id="1_j861xy03" title="Video C: What is the whole? Q. What is the whole in this interpretation?" thumbnail="#" content="#" grid="true"/>
+      <relate id="1_n5bhlw0s" title="Video D: Connecting different interpretations Q. Explain ¼ of 3, ¾ of 1, and ¾ of 3 in this representation of ¾." thumbnail="#" content="#" grid="true"/>
+    </relatedvideos>
+    <cuepoints>
+      <cuepoint id="VID01" time="00:00:00" src="media/Slide02.png"/>
+    </cuepoints>
+    <resources/>
+    <supplements/>
+  </video>
+  <video id="1_4ofxvsph" title="Video B: Green pieces vs. white pieces Q. What is the whole in this interpretation?" thumbnail="#" content="#">
+    <cuepoints>
+      <cuepoint id="VID01" time="00:00:00" src="media/Slide02.png"/>
+    </cuepoints>
+    <resources/>
+    <supplements/>
+  </video>
+  <video id="1_j861xy03" title="Video C: What is the whole? Q. What is the whole in this interpretation?" thumbnail="#" content="#">
+    <cuepoints>
+      <cuepoint id="VID01" time="00:00:00" src="media/Slide02.png"/>
+    </cuepoints>
+    <resources/>
+    <supplements/>
+  </video>
+  <video id="1_n5bhlw0s" title="Video D: Connecting different interpretations Q. Explain ¼ of 3, ¾ of 1, and ¾ of 3 in this representation of ¾." thumbnail="#" content="#">
+    <cuepoints>
+      <cuepoint id="VID01" time="00:00:00" src="media/Slide02.png"/>
+    </cuepoints>
+    <resources/>
+    <supplements/>
+  </video>
+</data>

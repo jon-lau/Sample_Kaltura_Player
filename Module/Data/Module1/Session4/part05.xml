@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<data>
+  <video id="1_uz70pmvp" title="Video A: Important properties and conventions of the number line" thumbnail="#" content="#">
+    <relatedvideos>
+      <relate id="1_uz70pmvp" title="Video A: Important properties and conventions of the number line" thumbnail="#" content="#"/>
+      <relate id="1_cpn5swhw" title="Video B: Infinitely many equivalent forms of a number" thumbnail="#" content="#" grid="true"/>
+      <relate id="1_a7rwi4b8" title="Video C: All integers can be written as a fraction" thumbnail="#" content="#" grid="true"/>
+      <relate id="1_2wylbrg8" title="Video D: The rational numbers are dense on the line" thumbnail="#" content="#" grid="true"/>
+      <relate id="1_7i3w654a" title="Video E: Additive inverse" thumbnail="#" content="#" grid="true" />
+      <relate id="1_jw9bgr61" title="Video F: The real line" thumbnail="#" content="#" grid="true"/>
+      <relate id="1_dc55kt3k" title="Video G: A mathematical object" thumbnail="#" content="#" grid="true"/>
+    </relatedvideos>
+    <cuepoints>
+      <cuepoint id="VID01" time="00:00:00" src="media/Slide04.png"/>
+    </cuepoints>
+    <resources>
+      <resource id="1" name="Slide: Other observations about the number line" src="media/Slide05.png"/>
+      <resource id="2" name="Handout: Summarizing key ideas about the number line" src="media/s04_p5_numberline.pdf"/>
+    </resources>
+    <supplements>
+      <supplement id="1" name="Math notes: Properties and conventions of the number line" src="media/s04_p5_mathnotes_numberline.pdf"/>
+    </supplements>
+  </video>
+  <video id="1_cpn5swhw" title="Video B: Infinitely many equivalent forms of a number" thumbnail="#" content="#">
+    <cuepoints>
+      <cuepoint id="VID01" time="00:00:00" src="media/Slide04.png"/>
+    </cuepoints>
+    <resources>
+      <resource id="1" name="Slide: Other observations about the number line" src="media/Slide05.png"/>
+      <resource id="2" name="Handout: Summarizing key ideas about the number line" src="media/s04_p5_numberline.pdf"/>
+    </resources>
+    <supplements>
+      <supplement id="1" name="Math notes: Properties and conventions of the number line" src="media/s04_p5_mathnotes_numberline.pdf"/>
+    </supplements>
+  </video>
+  <video id="1_a7rwi4b8" title="Video C: All integers can be written as a fraction" thumbnail="#" content="#">
+    <cuepoints>
+      <cuepoint id="VID01" time="00:00:00" src="media/Slide04.png"/>
+    </cuepoints>
+    <resources>
+      <resource id="1" name="Slide: Other observations about the number line" src="media/Slide05.png"/>
+      <resource id="2" name="Handout: Summarizing key ideas about the number line" src="media/s04_p5_numberline.pdf"/>
+    </resources>
+    <supplements>
+      <supplement id="1" name="Math notes: Properties and conventions of the number line" src="media/s04_p5_mathnotes_numberline.pdf"/>
+    </supplements>
+  </video>
+  <video id="1_2wylbrg8" title="Video D: The rational numbers are dense on the line" thumbnail="#" content="#">
+    <cuepoints>
+      <cuepoint id="VID01" time="00:00:00" src="media/Slide04.png"/>
+    </cuepoints>
+    <resources>
+      <resource id="1" name="Slide: Other observations about the number line" src="media/Slide05.png"/>
+      <resource id="2" name="Handout: Summarizing key ideas about the number line" src="media/s04_p5_numberline.pdf"/>
+    </resources>
+    <supplements>
+      <supplement id="1" name="Math notes: Properties and conventions of the number line" src="media/s04_p5_mathnotes_numberline.pdf"/>
+    </supplements>
+  </video>
+  <video id="1_7i3w654a" title="Video E: Additive inverse" thumbnail="#" content="#">
+    <cuepoints>
+      <cuepoint id="VID01" time="00:00:00" src="media/Slide04.png"/>
+    </cuepoints>
+    <resources>
+      <resource id="1" name="Slide: Other observations about the number line" src="media/Slide05.png"/>
+      <resource id="2" name="Handout: Summarizing key ideas about the number line" src="media/s04_p5_numberline.pdf"/>
+    </resources>
+    <supplements>
+      <supplement id="1" name="Math notes: Properties and conventions of the number line" src="media/s04_p5_mathnotes_numberline.pdf"/>
+    </supplements>
+  </video>
+  <video id="1_jw9bgr61" title="Video F: The real line" thumbnail="#" content="#">
+    <cuepoints>
+      <cuepoint id="VID01" time="00:00:00" src="media/Slide04.png"/>
+    </cuepoints>
+    <resources>
+      <resource id="1" name="Slide: Other observations about the number line" src="media/Slide05.png"/>
+      <resource id="2" name="Handout: Summarizing key ideas about the number line" src="media/s04_p5_numberline.pdf"/>
+    </resources>
+    <supplements>
+      <supplement id="1" name="Math notes: Properties and conventions of the number line" src="media/s04_p5_mathnotes_numberline.pdf"/>
+    </supplements>
+  </video>
+  <video id="1_dc55kt3k" title="Video G: A mathematical object" thumbnail="#" content="#">
+    <cuepoints>
+      <cuepoint id="VID01" time="00:00:00" src="media/Slide04.png"/>
+    </cuepoints>
+    <resources>
+      <resource id="1" name="Slide: Other observations about the number line" src="media/Slide05.png"/>
+      <resource id="2" name="Handout: Summarizing key ideas about the number line" src="media/s04_p5_numberline.pdf"/>
+    </resources>
+    <supplements>
+      <supplement id="1" name="Math notes: Properties and conventions of the number line" src="media/s04_p5_mathnotes_numberline.pdf"/>
+    </supplements>
+  </video>
+</data>

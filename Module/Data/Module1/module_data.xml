@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+ <sessions>
+  <session name="Session 1" path="Session1">
+   <part name="Part 1: Module preview" path="part01" title="Module preview"/>
+   <part name="Part 2: Using records of practice to study mathematics teaching" path="part02" title="Using records of practice to study mathematics teaching"/>
+   <part name="Part 3: Analyzing a video from a third-grade classroom" path="part03" title="Analyzing a video from a third-grade classroom"/>
+   <part name="Part 4: Discussing the third-grade video" path="part04" title="Discussing the third-grade video"/>
+   <part name="Part 5: Representations for comparing 4/4 and 4/8" path="part05" title="Representations for comparing 4/4 and 4/8"/>
+   <part name="Part 6: Instances of equivalence in mathematics" path="part06" title="Instances of equivalence in mathematics"/>
+   <part name="Part 7: Wrap up" path="part07" title="Wrap up"/>
+  </session>
+  <session name="Session 2" path="Session2">
+   <part name="Part 1: Preview" path="part01" title="Preview"/>
+   <part name="Part 2: The importance of representations in mathematics and mathematics teaching" path="part02" title="The importance of representations in mathematics and mathematics teaching"/>
+   <part name="Part 3: Analyzing representations of ¾" path="part03" title="Analyzing representations of ¾"/>
+   <part name="Part 4: Examining explanations for representations of ¾" path="part04" title="Examining explanations for representations of ¾"/>
+   <part name="Part 5: Explaining representation (g)" path="part05" title="Explaining representation (g)"/>
+   <part name="Part 6: Types of connections with representations" path="part06" title="Types of connections with representations"/>
+   <part name="Part 7: Wrap up" path="part07" title="Wrap up "/>
+  </session>
+  <session name="Session 3" path="Session3">
+   <part name="Part 1: Preview" path="part01" title="Preview"/>
+   <part name="Part 2: Connecting representations of ¾" path="part02" title="Connecting representations of ¾"/>
+   <part name="Part 3: Explaining representation (i)" path="part03" title="Explaining representation (i)"/>
+   <part name="Part 4: The benefits of connecting representations" path="part04" title="The benefits of connecting representations"/>
+   <part name="Part 5: Developing a definition of a fraction" path="part05" title="Developing a definition of a fraction"/>
+   <part name="Part 6: A working definition of a fraction" path="part06" title="A working definition of a fraction"/>
+   <part name="Part 7: Wrap up" path="part07" title="Wrap up"/>
+  </session>
+  <session name="Session 4" path="Session4">
+   <part name="Part 1: Preview" path="part01" title="Preview"/>
+   <part name="Part 2: Interpreting student thinking about the number line" path="part02" title="Interpreting student thinking about the number line"/>
+   <part name="Part 3: Locating numbers on the number line" path="part03" title="Locating numbers on the number line"/>
+   <part name="Part 4: Properties and conventions of the number line" path="part04" title="Properties and conventions of the number line"/>
+   <part name="Part 5: Summarizing key ideas about the number line" path="part05" title="Summarizing key ideas about the number line"/>
+   <part name="Part 6: Analyzing students’ errors when labeling marked points on the number line" path="part06" title="Analyzing students’ errors when labeling marked points on the number line"/>
+   <part name="Part 7: Wrap up" path="part07" title="Wrap up"/>
+  </session>
+  <session name="Session 5" path="Session5">
+   <part name="Part 1: Preview" path="part01" title="Preview"/>
+   <part name="Part 2: The practice of narrating" path="part02" title="The practice of narrating"/>
+   <part name="Part 3: General steps for narrating the construction and use of a representation" path="part03" title="General steps for narrating the construction and use of a representation"/>
+   <part name="Part 4: Analyzing others’ narrations of the number line to compare ¾ and 4/3" path="part04" title="Analyzing others’ narrations of the number line to compare ¾ and 4/3"/>
+   <part name="Part 5: Additional practice narrating the construction and use of a number line" path="part05" title="Additional practice narrating the construction and use of a number line"/>
+   <part name="Part 6: Analyzing fraction comparison tasks" path="part06" title="Analyzing fraction comparison tasks"/>
+   <part name="Part 7: Wrap up" path="part07" title="Wrap up"/>
+  </session>
+  <session name="Session 6" path="Session6">
+   <part name="Part 1: Preview" path="part01" title="Preview"/>
+   <part name="Part 2: The importance of attending to public recording space in mathematics teaching" path="part02" title="The importance of attending to public recording space in mathematics teaching"/>
+   <part name="Part 3: Considerations for recording in public space" path="part03" title="Considerations for recording in public space"/>
+   <part name="Part 4: Analyzing images of public recording space" path="part04" title="Analyzing images of public recording space"/>
+   <part name="Part 5: A process for planning for and learning from the use of public recording space" path="part05" title="A process for planning for and learning from the use of public recording space"/>
+   <part name="Part 6" path="part06" title="Wrap up"/>
+  </session>
+  <session name="Session 7" path="Session7">
+   <part name="Part 1: Preview" path="part01" title="Preview"/>
+   <part name="Part 2: Analyzing a task: Which is longer: 3/8 of an inch or 7/16 of an inch?" path="part02" title="Analyzing a task: Which is longer: 3/8 of an inch or 7/16 of an inch?"/>
+   <part name="Part 3: Practice narrating" path="part03" title="Practice narrating"/>
+   <part name="Part 4: Analyzing records of public recording space" path="part04" title="Analyzing records of public recording space"/>
+   <part name="Part 5: Improving the use of public recording space" path="part05" title="Improving the use of public recording space"/>
+   <part name="Part 6: Setting a goal for improving the use of public recording space" path="part06" title="Setting a goal for improving the use of public recording space"/>
+   <part name="Part 7: Wrap up" path="part07" title="Wrap up"/>
+  </session>
+  <session name="Session 8" path="Session8">
+   <part name="Part 1: Preview" path="part01" title="Preview"/>
+   <part name="Part 2: Analyzing and narrating a fractions-of-an-area task" path="part02" title="Analyzing and narrating a fractions-of-an-area task"/>
+   <part name="Part 3: Supporting students’ narrations" path="part03" title="Supporting students’ narrations"/>
+   <part name="Part 4: Analyzing students’ methods for comparing fractions" path="part04" title="Analyzing students’ methods for comparing fractions"/>
+   <part name="Part 5: Using a checklist to analyze records of public recording space" path="part05" title="Using a checklist to analyze records of public recording space"/>
+   <part name="Part 6: Wrap up" path="part06" title="Wrap up"/>
+  </session>
+  <session name="Session 9" path="Session9">
+   <part name="Part 1: Preview" path="part01" title="Preview"/>
+   <part name="Part 2: Analyzing fraction-comparison problems" path="part02" title="Analyzing fraction-comparison problems"/>
+   <part name="Part 3: Four strategies for comparing fractions" path="part03" title="Four strategies for comparing fractions"/>
+   <part name="Part 4: Analyzing students’ comparison strategies" path="part04" title="Analyzing students’ comparison strategies"/>
+   <part name="Part 5: Showing and explaining equivalence" path="part05" title="Showing and explaining equivalence"/>
+   <part name="Part 6: Wrap up" path="part06" title="Wrap up"/>
+  </session>
+  <session name="Session 10" path="Session10">
+   <part name="Part 1: Preview" path="part01" title="Preview"/>
+   <part name="Part 2: Analyzing and narrating a fraction-of-a-set task" path="part02" title="Analyzing and narrating a fraction-of-a-set task"/>
+   <part name="Part 3: Supporting students’ understanding and use of representations shared by classmates" path="part03" title="Supporting students’ understanding and use of representations shared by classmates"/>
+   <part name="Part 4: Using student errors to support students’ understanding and use of representations shared by classmates" path="part04" title="Using student errors to support students’ understanding and use of representations shared by classmates"/>
+   <part name="Part 5: Encouraging collective work on errors" path="part05" title="Encouraging collective work on errors"/>
+   <part name="Part 6: Summarizing to support students’ understanding and use of representations shared by classmates" path="part06" title="Summarizing to support students’ understanding and use of representations shared by classmates"/>
+   <part name="Part 7: Teaching moves that support students’ understanding and use of representations shared by classmates" path="part07" title="Teaching moves that support students’ understanding and use of representations shared by classmates"/>
+   <part name="Part 8: Wrap up" path="part08" title="Wrap up"/>
+  </session>
+ </sessions>
+</data>

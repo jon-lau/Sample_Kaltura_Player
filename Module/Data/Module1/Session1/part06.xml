@@ -1,0 +1,65 @@
+<?xml version="1.0" ?>
+<data>
+  <video id="1_7why5a8y" title="Video A: Overview of equivalence" thumbnail="#" content="#">
+    <relatedvideos>
+      <relate id="1_7why5a8y" title="Video A: Overview of equivalence" thumbnail="#" content="#"/>
+      <relate id="1_hzu4yxr1" title="Video B: Place value example" thumbnail="#" content="#" grid="true"/>
+      <relate id="1_ipx21lc3" title="Video C: Geometry example" thumbnail="#" content="#" grid="true"/>
+      <relate id="1_6veq8sol" title="Video D: Fraction example" thumbnail="#" content="#" grid="true"/>
+      <relate id="1_0y3b8qvb" title="Video E: Algebra example" thumbnail="#" content="#" grid="true"/>
+    </relatedvideos>
+    <cuepoints>
+      <cuepoint id="VID01" time="00:00:00" src="media/Slides/Slide11.png"/>
+    </cuepoints>
+    <resources>
+      <resource id="1" name="Handout: Possible instances of equivalence in mathematics" src="media/Handouts/s01_p6_instances-of-equivalence.pdf"/>
+    </resources>
+    <supplements>
+      <supplement id="1" name="Math notes: Instances of equivalence in mathematics" src="media/Handouts/s01_p6_mathnotes_equivalence.pdf"/>
+    </supplements>
+  </video>
+
+  <video id="1_hzu4yxr1" title="Video B: Place value example" thumbnail="#" content="#">
+    <cuepoints>
+      <cuepoint id="VID01" time="00:00:00" src="media/Slides/Slide11.png"/>
+    </cuepoints>
+    <resources>
+      <resource id="1" name="Handout: Possible instances of equivalence in mathematics" src="media/Handouts/s01_p6_instances-of-equivalence.pdf"/>
+    </resources>
+    <supplements>
+      <supplement id="1" name="Math notes: Instances of equivalence in mathematics" src="media/Handouts/s01_p6_mathnotes_equivalence.pdf"/>    </supplements>
+  </video>
+
+  <video id="1_ipx21lc3" title="Video C: Geometry example" thumbnail="#" content="#">
+    <cuepoints>
+      <cuepoint id="VID01" time="00:00:00" src="media/Slides/Slide11.png"/>
+    </cuepoints>
+    <resources>
+      <resource id="1" name="Handout: Possible instances of equivalence in mathematics" src="media/Handouts/s01_p6_instances-of-equivalence.pdf"/>
+    </resources>
+    <supplements>
+      <supplement id="1" name="Math notes: Instances of equivalence in mathematics" src="media/Handouts/s01_p6_mathnotes_equivalence.pdf"/>    </supplements>
+  </video>
+
+  <video id="1_6veq8sol" title="Video D: Fraction example" thumbnail="#" content="#">
+    <cuepoints>
+      <cuepoint id="VID01" time="00:00:00" src="media/Slides/Slide11.png"/>
+    </cuepoints>
+    <resources>
+      <resource id="1" name="Handout: Possible instances of equivalence in mathematics" src="media/Handouts/s01_p6_instances-of-equivalence.pdf"/>
+    </resources>
+    <supplements>
+      <supplement id="1" name="Math notes: Instances of equivalence in mathematics" src="media/Handouts/s01_p6_mathnotes_equivalence.pdf"/>    </supplements>
+  </video>
+
+  <video id="1_0y3b8qvb" title="Video E: Algebra example" thumbnail="#" content="#">
+    <cuepoints>
+      <cuepoint id="VID01" time="00:00:00" src="media/Slides/Slide11.png"/>
+    </cuepoints>
+    <resources>
+      <resource id="1" name="Handout: Possible instances of equivalence in mathematics" src="media/Handouts/s01_p6_instances-of-equivalence.pdf"/>
+    </resources>
+    <supplements>
+      <supplement id="1" name="Math notes: Instances of equivalence in mathematics" src="media/Handouts/s01_p6_mathnotes_equivalence.pdf"/>    </supplements>
+  </video>
+</data>

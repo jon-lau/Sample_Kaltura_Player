@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<data>
+  <video id="1_xzzq05uc" title="Video A: Going on forever" thumbnail="#" content="#">
+    <relatedvideos>
+      <relate id="1_xzzq05uc" title="Video A: Going on forever" thumbnail="#" content="#"/>
+      <relate id="1_9icr10ue" title="Video B: Special role of 0 " thumbnail="#" content="#" grid="true"/>
+      <relate id="1_owy91ikf" title="Video C: The unit interval" thumbnail="#" content="#" grid="true"/>
+      <relate id="1_bg87efv8" title="Video D: Which numbers can be represented " thumbnail="#" content="#" grid="true"/>
+      <relate id="1_hq6gndjc" title="Video E: Distance and order " thumbnail="#" content="#" grid="true"/>
+    </relatedvideos>
+    <cuepoints>
+      <cuepoint id="VID01" time="00:00:00" src="media/noslide.png"/>
+    </cuepoints>
+
+  </video>
+  <video id="1_9icr10ue" title="Video B: Special role of 0" thumbnail="#" content="#">
+    <cuepoints>
+      <cuepoint id="VID01" time="00:00:00" src="media/noslide.png"/>
+    </cuepoints>
+
+  </video>
+  <video id="1_owy91ikf" title="Video C: The unit interval" thumbnail="#" content="#">
+    <cuepoints>
+      <cuepoint id="VID01" time="00:00:00" src="media/noslide.png"/>
+    </cuepoints>
+
+  </video>
+  <video id="1_bg87efv8" title="Video D: Which numbers can be represented" thumbnail="#" content="#">
+    <cuepoints>
+      <cuepoint id="VID01" time="00:00:00" src="media/noslide.png"/>
+    </cuepoints>
+
+  </video>
+  <video id="1_hq6gndjc" title="Video E: Distance and order" thumbnail="#" content="#">
+    <cuepoints>
+      <cuepoint id="VID01" time="00:00:00" src="media/noslide.png"/>
+    </cuepoints>
+
+  </video>
+</data>

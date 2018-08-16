@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<data>
+  <video id="1_7f6v8rig" title="Video A: Describing the location of 1½" thumbnail="#" content="#">
+    <relatedvideos>
+      <relate id="1_7f6v8rig" title="Video A: Describing the location of 1½" thumbnail="#" content="#"/>
+      <relate id="1_21m1lj8s" title="Video B: Describing the location of 1/8 " thumbnail="#" content="#" grid="true"/>
+      <relate id="1_27t6dt9q" title="Video C: Describing the location of ¼ and ¾ " thumbnail="#" content="#" grid="true"/>
+      <relate id="1_9ngto6xt" title="Video D: Describing the location of -54 and other relatively large numbers" thumbnail="#" content="#" grid="true"/>
+    </relatedvideos>
+
+
+    <cuepoints>
+      <cuepoint id="VID01" time="00:00:00" src="media/noslide.png"/>
+    </cuepoints>
+            <resources>
+              <resource id="1" name="Handout: Blank number lines" src="media/s04_p3_numberline.pdf"/>
+            </resources>
+
+  </video>
+  <video id="1_21m1lj8s" title="Video B: Describing the location of 1/8 " thumbnail="#" content="#">
+    <cuepoints>
+      <cuepoint id="VID01" time="00:00:00" src="media/noslide.png"/>
+    </cuepoints>
+            <resources>
+              <resource id="1" name="Handout: Blank number lines" src="media/s04_p3_numberline.pdf"/>
+            </resources>
+
+  </video>
+  <video id="1_27t6dt9q" title="Video C: Describing the location of ¼ and ¾  " thumbnail="#" content="#">
+    <cuepoints>
+      <cuepoint id="VID01" time="00:00:00" src="media/noslide.png"/>
+    </cuepoints>
+            <resources>
+              <resource id="1" name="Handout: Blank number lines" src="media/s04_p3_numberline.pdf"/>
+            </resources>
+
+  </video>
+  <video id="1_9ngto6xt" title="Video D: Describing the location of -54 and other relatively large numbers " thumbnail="#" content="#">
+    <cuepoints>
+      <cuepoint id="VID01" time="00:00:00" src="media/noslide.png"/>
+    </cuepoints>
+            <resources>
+              <resource id="1" name="Handout: Blank number lines" src="media/s04_p3_numberline.pdf"/>
+            </resources>
+
+  </video>
+
+</data>

@@ -1,0 +1,63 @@
+<?xml version="1.0" ?>
+<data>
+  <video id="1_1k1xapvr" title="Video A: Additional ideas" thumbnail="#" content="#">
+    <relatedvideos>
+      <relate id="1_1k1xapvr" title="Video A: Additional ideas" thumbnail="#" content="#"/>
+      <relate id="1_mzd8ff1o" title="Video B: Using the board to support student learning How do the components mentioned support student learning of mathematics?" thumbnail="#" content="#" grid="true"/>
+      <relate id="1_bnzs9ilr" title="Video C: Something to be cautious about when recording How could a teacher record in ways that would avoid this potential problem?" thumbnail="#" content="#" grid="true"/>
+      <relate id="1_p33hja9b" title="Video D: Recording the day’s goal What might be a drawback of including this component in your recording?" thumbnail="#" content="#" grid="true"/>
+      <relate id="1_evs11umj" title="Video E: Deciding what to erase and what to save What sorts of recordings do you save to use later? How do you decide?" thumbnail="#" content="#" grid="true"/>
+    </relatedvideos>
+    <cuepoints>
+      <cuepoint id="VID01" time="00:00:00" src="media/Slide06.png"/>
+    </cuepoints>
+    <resources>
+      <resource id="1" name="Slide: Analyzing images from teaching" src="media/Slide07.png"/>
+      <resource id="2" name="Handout: Blackboard images to analyze" src="media/s06_p4_blackboard-images-to-analyze.pdf"/>
+    </resources>
+    <supplements/>
+  </video>
+
+  <video id="1_mzd8ff1o" title="Video B: Using the board to support student learning How do the components mentioned support student learning of mathematics?" thumbnail="#" content="#">
+    <cuepoints>
+      <cuepoint id="VID01" time="00:00:00" src="media/Slide06.png"/>
+    </cuepoints>
+    <resources>
+      <resource id="1" name="Slide: Analyzing images from teaching" src="media/Slide07.png"/>
+      <resource id="2" name="Handout: Blackboard images to analyze" src="media/s06_p4_blackboard-images-to-analyze.pdf"/>
+    </resources>
+    <supplements/>
+  </video>
+  <video id="1_bnzs9ilr" title="Video C: Something to be cautious about when recording How could a teacher record in ways that would avoid this potential problem?" thumbnail="#" content="#">
+    <cuepoints>
+      <cuepoint id="VID01" time="00:00:00" src="media/Slide06.png"/>
+    </cuepoints>
+    <resources>
+      <resource id="1" name="Slide: Analyzing images from teaching" src="media/Slide07.png"/>
+      <resource id="2" name="Handout: Blackboard images to analyze" src="media/s06_p4_blackboard-images-to-analyze.pdf"/>
+    </resources>
+    <supplements/>
+  </video>
+
+  <video id="1_p33hja9b" title="Video D: Recording the day’s goal What might be a drawback of including this component in your recording?" thumbnail="#" content="#">
+    <cuepoints>
+      <cuepoint id="VID01" time="00:00:00" src="media/Slide06.png"/>
+    </cuepoints>
+    <resources>
+      <resource id="1" name="Slide: Analyzing images from teaching" src="media/Slide07.png"/>
+      <resource id="2" name="Handout: Blackboard images to analyze" src="media/s06_p4_blackboard-images-to-analyze.pdf"/>
+    </resources>
+    <supplements/>
+  </video>
+  
+  <video id="1_evs11umj" title="Video E: Deciding what to erase and what to save What sorts of recordings do you save to use later? How do you decide?" thumbnail="#" content="#">
+    <cuepoints>
+      <cuepoint id="VID01" time="00:00:00" src="media/Slide06.png"/>
+    </cuepoints>
+    <resources>
+      <resource id="1" name="Slide: Analyzing images from teaching" src="media/Slide07.png"/>
+      <resource id="2" name="Handout: Blackboard images to analyze" src="media/s06_p4_blackboard-images-to-analyze.pdf"/>
+    </resources>
+    <supplements/>
+  </video>
+</data>
