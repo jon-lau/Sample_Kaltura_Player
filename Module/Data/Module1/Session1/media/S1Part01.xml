@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<cuepoints>
-  <cuepoint id="VID01" time="00:00:00" src="Slide01.png"/>
-  <cuepoint id="VID02" time="00:01:17" src="Slide02.png"/>
-  <cuepoint id="VID03" time="00:02:40" src="Slide03.png"/>
-</cuepoints>

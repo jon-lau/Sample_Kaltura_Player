@@ -6,28 +6,11 @@
       <relate id="1_d43g100u" title="Video B: Session 1 overview" thumbnail="#" content="#"/>
     </relatedvideos>
     <cuepoints>
-      <cuepoint id="VID01" time="00:00:00" src="media/Slides/Slide01.png"/>
-      <cuepoint id="VID02" time="00:01:17" src="media/Slides/Slide02.png"/>
-      <cuepoint id="VID03" time="00:02:40" src="media/Slides/Slide03.png"/>
+      <cuepoint id="VID01" time="00:00:00" src="media/Slides/noslide.png"/>
     </cuepoints>
     <resources>
-      <resource id="1" name="Slide: Four elements (strands) of content" src="media/Slides/Slide02.png"/>
-      <resource id="2" name="Slide: Distinctive features of the module" src="media/Slides/Slide03.png"/>
-      <resource id="3" name="Slide: Module content" src="media/Slides/Slide04.png"/>
-      <resource id="4" name="Slide: Overview of Session 1" src="media/Slides/Slide05.png"/>
+      <resource id="1" name="Handout: Sample PDF" src="media/Handouts/samplePDF.pdf"/>
     </resources>
-    <supplements/>
   </video>
-  <video id="1_d43g100u" title="Video B: Session 1 overview" thumbnail="#" content="#">
-    <cuepoints>
-      <cuepoint id="VID01" time="00:00:00" src="media/Slides/Slide05.png"/>
-    </cuepoints>
-    <resources>
-      <resource id="1" name="Slide: Four elements (strands) of content" src="media/Slides/Slide02.png"/>
-      <resource id="2" name="Slide: Distinctive features of the module" src="media/Slides/Slide03.png"/>
-      <resource id="3" name="Slide: Module content" src="media/Slides/Slide04.png"/>
-      <resource id="4" name="Slide: Overview of Session 1" src="media/Slides/Slide05.png"/>
-    </resources>
-    <supplements/>
-  </video>
+  <video id="1_d43g100u" title="Video B: Session 12 overview" thumbnail="#" content="#"></video>
 </data>
