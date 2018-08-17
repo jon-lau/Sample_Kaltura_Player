@@ -46,7 +46,7 @@ Cuepoints are used to control presentation slides during the video. You can have
 
 
 ### Resources Example
-    `<resources>
+    <resources>
       <resource id="1" name="Handout: Sample PDF" src="media/Handouts/samplePDF.pdf"/>
     </resources>`
 
