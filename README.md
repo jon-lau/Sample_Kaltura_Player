@@ -10,12 +10,12 @@ The Module/Data directory holds the specifications for the video library.
 
 
 ### List of Sessions
- `<sessions>
-  <session name="Session 1" path="Session1">
-   <part name="Sample Videos 1" path="part01" title="Sample Videos 1"/>
-   <part name="Sample Videos 2" path="part02" title="Sample Videos 2"/>
-  </session>
- </sessions>`
+ `<sessions>`
+  `<session name="Session 1" path="Session1">`
+   `<part name="Sample Videos 1" path="part01" title="Sample Videos 1"/>`
+   `<part name="Sample Videos 2" path="part02" title="Sample Videos 2"/>`
+  `</session>`
+ `</sessions>`
 
  Each session in the list will have a name and a path to the associated folder. Within each session there will be the video parts that you wish to show, including their name, path, and desired title. 
 
@@ -28,27 +28,27 @@ The Module/Data directory holds the specifications for the video library.
   The Main video tag is defined by the specific video ID as well as a desired title. The thumbnail & content will be taken from the video itself unless otherwise specified. 
 
 ### Related Videos Example
-    `<relatedvideos>
-        <relate id="0_crv76sa2" title="Ka'upu Fledgling" thumbnail="#" content="#"/>
-        <relate id="0_yw1cd72x" title="Papahanaumokuakea Marine National Monument" thumbnail="#" content="#"/>
-        <relate id="0_mpoq358l" title="Halemaumau Lava Lake" thumbnail="#" content="#"/>
-    </relatedvideos>`
+    `<relatedvideos>`
+        `<relate id="0_crv76sa2" title="Ka'upu Fledgling" thumbnail="#" content="#"/>`
+        `<relate id="0_yw1cd72x" title="Papahanaumokuakea Marine National Monument" thumbnail="#" content="#"/>`
+        `<relate id="0_mpoq358l" title="Halemaumau Lava Lake" thumbnail="#" content="#"/>`
+    `</relatedvideos>`
 
 Related videos are defined just like the main video, with a video ID and title. the related videos can have the same fields as the main video (except related videos)
 
 
 ### Presentation Slides Example
-    `<cuepoints>
-        <cuepoint id="VID01" time="00:00:00" src="media/Slides/noslide.png"/>
-    </cuepoints>`
+    `<cuepoints>`
+        `<cuepoint id="VID01" time="00:00:00" src="media/Slides/noslide.png"/>`
+    `</cuepoints>`
 
 Cuepoints are used to control presentation slides during the video. You can have multiple cuepoints and each have a unique ID and the time in the video that you wish to see the slide at. Each cuepoint will appear on the video progress bar and in the "Resources" tab on the right side of the player. Clicking on a slide in the "Resources" tab will take you to that time in the video. 
 
 
 ### Resources Example
-    `<resources>
-      <resource id="1" name="Handout: Sample PDF" src="media/Handouts/samplePDF.pdf"/>
-    </resources>`
+    `<resources>`
+      `<resource id="1" name="Handout: Sample PDF" src="media/Handouts/samplePDF.pdf"/>`
+    `</resources>`
 
 Resourses are defined by a unique ID, name, and a path to the desired file. All resources will be available in the "Resources"  tab on the right of the video player
 
