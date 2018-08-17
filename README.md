@@ -1,5 +1,5 @@
 # Sample_Kaltura_Player
-This sample video player can be used to display Kaltura hosted videos while displaying complementary resources (i.e. presentations & handouts). The video player offers a video library interface to organize multiple videos into respective subsections which allows users to navigate to related videos with ease. 
+This sample video player can be used to play Kaltura hosted videos while displaying complementary resources (i.e. presentations & handouts). The video player offers a video library interface to organize multiple videos into respective subsections which allows users to navigate to related videos with ease. 
 
 The Kaltura player is initialized in the /Module/KalturaPlayer/js/control.js file. Further customizations & player features can be enabled here, for more information on additional features you can reference their [documentation](http://player.kaltura.com/docs/kwidget)
 
