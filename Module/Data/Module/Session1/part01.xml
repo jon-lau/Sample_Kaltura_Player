@@ -8,7 +8,7 @@
       <relate id="0_mpoq358l" title="Halemaumau Lava Lake" thumbnail="#" content="#"/>
     </relatedvideos>
     <cuepoints>
-      <cuepoint id="VID01" time="00:00:00" src="media/Slides/noslide.png"/>
+      <cuepoint id="VID01" time="00:00:20" src="media/Slides/noslide.png"/>
     </cuepoints>
     <resources>
       <resource id="1" name="Handout: Sample PDF" src="media/Handouts/samplePDF.pdf"/>
