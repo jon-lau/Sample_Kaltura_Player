@@ -34,7 +34,7 @@ The Module/Data directory holds the specifications for the video library.
         <relate id="0_mpoq358l" title="Halemaumau Lava Lake" thumbnail="#" content="#"/>
     </relatedvideos>
 
-Related videos are defined just like the main video, with a video ID and title. the related videos can have the same fields as the main video (except related videos)
+Related videos are defined just like the main video, with a video ID and title.
 
 
 ### Presentation Slides Example
