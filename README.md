@@ -4,9 +4,10 @@ This sample video player can be used to play Kaltura hosted videos while display
 The Kaltura player is initialized in the /Module/KalturaPlayer/js/control.js file. Further customizations & player features can be enabled here, for more information on additional features you can reference their [documentation](http://player.kaltura.com/docs/kwidget)
 
 ## Specifying a Video Library
+The player is rendered on a blank html page, code from the index.html can be used to embed the custom player into an application. 
 The Module/Data directory holds the specifications for the video library. 
 
-1. Module/Data/Module/module_data.xml dictates the overall library and references the videos that are available in the top left menu. The video player library can hold multiple sessions that are built from multiple parts. This file consists of a list of sessions which have 'parts' which reference specific videos. The title in the top menu is specified here in the `name` field of each part.
+1. Module/Data/Module/module_data.xml dictates the overall library and references the videos that are available in the top left menu. The video player library can hold multiple sessions that are built from various parts. This file consists of a list of sessions which have 'parts' which reference specific videos. The title displayed in the top menu is specified here in the `name` field of each part.
 
 
 ### List of Sessions
@@ -17,7 +18,7 @@ The Module/Data directory holds the specifications for the video library.
         </session>
     </sessions>
 
- Each session in the list will have a name and a path to the associated folder. Within each session there will be the video parts that you wish to show, including their name, path, and desired title. 
+ Each session in the list will have a name and a path to the associated folder. Within each session there will be the video parts that you wish to show specified by their name, path, and desired title. 
 
 2. Module/Data/Module/Session1/part.xml specifies what is displayed while a video is playing. The first video tag represents the main video that will be played. Videos are specified by the `id` field. (The video ID will need to be associated with the partnerID (wid) specified in the KalturaPlayer/js/control.js file when the HTML player is initialized.) Within the main video tag you are able to specify relatedvideos, presentation slides, cuepoints and resources that are available. 
 
@@ -42,7 +43,7 @@ Related videos are defined just like the main video, with a video ID and title.
         <cuepoint id="VID01" time="00:00:00" src="media/Slides/noslide.png"/>
     </cuepoints>
 
-Cuepoints are used to control presentation slides during the video. You can have multiple cuepoints and each have a unique ID and the time in the video that you wish to see the slide at. Each cuepoint will appear on the video progress bar and in the "Resources" tab on the right side of the player. Clicking on a slide in the "Resources" tab will take you to that time in the video. 
+Cuepoints are used to control presentation slides during the video. You can have multiple cuepoints and each have a unique ID and the time in the video that you wish to see the slide at. Each cuepoint will appear on the video progress bar as a marker and in the "Resources" tab on the right side of the player. Clicking on a slide in the "Resources" tab will take you to that time in the video. 
 
 
 ### Resources Example
@@ -52,5 +53,5 @@ Cuepoints are used to control presentation slides during the video. You can have
 
 Resourses are defined by a unique ID, name, and a path to the desired file. All resources will be available in the "Resources"  tab on the right of the video player
 
-The second section to the part.xml files contains the related videos references. The videos in this section are generally of the same group (i.e. if there are 3 parts to a section then the remaining parts will be placed here). These video tags will also allow you to specify presentation slides, cuepoints and resources that are available. 
+The last section to the part.xml files contains the related videos references. The videos in this section are generally of the same group (i.e. if there are 3 parts to a section then the remaining parts will be placed here). These video tags will also allow you to specify presentation slides, cuepoints and resources that are available. 
 
